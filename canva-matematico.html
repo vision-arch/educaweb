@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Canva Matemático | Análisis Psicopedagógico</title>
+
+    <!-- Bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
+    
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+    <!-- MathJax -->
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+    <!-- Estilos -->
+    <link rel="stylesheet" href="assets/css/main.css" />
+    <link rel="stylesheet" href="assets/css/canva.css" />
+</head>
+
+<body>
+    <!-- Header -->
+    <div id="header"></div>
+
+    <main class="container">
+        <!-- Header Principal -->
+        <div class="row bg-primary text-white py-4">
+            <div class="col text-center">
+                <h1 class="display-5 fw-bold mb-3">🧮 Canva Matemático</h1>
+                <p class="fs-5 mb-0">Análisis paso a paso con enfoque psicopedagógico COPISI</p>
+            </div>
+        </div>
+
+        <!-- Contenido Principal -->
+        <div class="row min-vh-100">
+            <!-- Panel Izquierdo: Calculadora Científica -->
+            <div class="col-lg-4 bg-light border-end p-0">
+                <div class="p-4">
+                    <h3 class="fw-bold mb-4 text-dark">🖩 Calculadora Científica</h3>
+                    
+                    <!-- Display de Entrada -->
+                    <div class="mb-4">
+                        <input type="text" id="display-matematico" 
+                               class="form-control display-matematico text-center" 
+                               placeholder="Escribe tu expresión matemática..."
+                               readonly>
+                    </div>
+
+                    <!-- Teclado Científico Completo -->
+                    <div class="teclado-cientifico">
+                        <!-- Fila 1: Funciones Trigonométricas -->
+                        <div class="row g-2 mb-2">
+                            <div class="col-3"><button class="btn btn-tecla btn-funcion" data-val="sin(">sin</button></div>
+                            <div class="col-3"><button class="btn btn-tecla btn-funcion" data-val="cos(">cos</button></div>
+                            <div class="col-3"><button class="btn btn-tecla btn-funcion" data-val="tan(">tan</button></div>
+                            <div class="col-3"><button class="btn btn-tecla btn-funcion" data-val="log(">log</button></div>
+                        </div>
+
+                        <!-- Fila 2: Funciones Avanzadas -->
+                        <div class="row g-2 mb-2">
+                            <div class="col-3"><button class="btn btn-tecla btn-funcion" data-val="√(">√</button></div>
+                            <div class="col-3"><button class="btn btn-tecla btn-funcion" data-val="²">x²</button></div>
+                            <div class="col-3"><button class="btn btn-tecla btn-funcion" data-val="³">x³</button></div>
+                            <div class="col-3"><button class="btn btn-tecla btn-funcion" data-val="^">x^y</button></div>
+                        </div>
+
+                        <!-- Fila 3: Paréntesis y Constantes -->
+                        <div class="row g-2 mb-2">
+                            <div class="col-3"><button class="btn btn-tecla btn-parentesis" data-val="(">(</button></div>
+                            <div class="col-3"><button class="btn btn-tecla btn-parentesis" data-val=")">)</button></div>
+                            <div class="col-3"><button class="btn btn-tecla btn-constante" data-val="π">π</button></div>
+                            <div class="col-3"><button class="btn btn-tecla btn-constante" data-val="e">e</button></div>
+                        </div>
+
+                        <!-- Fila 4: Números -->
+                        <div class="row g-2 mb-2">
+                            <div class="col-3"><button class="btn btn-tecla btn-numero" data-val="7">7</button></div>
+                            <div class="col-3"><button class="btn btn-tecla btn-numero" data-val="8">8</button></div>
+                            <div class="col-3"><button class="btn btn-tecla btn-numero" data-val="9">9</button></div>
+                            <div class="col-3"><button class="btn btn-tecla btn-operador" data-val="÷">÷</button></div>
+                        </div>
+
+                        <!-- Fila 5: Números -->
+                        <div class="row g-2 mb-2">
+                            <div class="col-3"><button class="btn btn-tecla btn-numero" data-val="4">4</button></div>
+                            <div class="col-3"><button class="btn btn-tecla btn-numero" data-val="5">5</button></div>
+                            <div class="col-3"><button class="btn btn-tecla btn-numero" data-val="6">6</button></div>
+                            <div class="col-3"><button class="btn btn-tecla btn-operador" data-val="×">×</button></div>
+                        </div>
+
+                        <!-- Fila 6: Números -->
+                        <div class="row g-2 mb-2">
+                            <div class="col-3"><button class="btn btn-tecla btn-numero" data-val="1">1</button></div>
+                            <div class="col-3"><button class="btn btn-tecla btn-numero" data-val="2">2</button></div>
+                            <div class="col-3"><button class="btn btn-tecla btn-numero" data-val="3">3</button></div>
+                            <div class="col-3"><button class="btn btn-tecla btn-operador" data-val="-">−</button></div>
+                        </div>
+
+                        <!-- Fila 7: Números y Operadores -->
+                        <div class="row g-2 mb-2">
+                            <div class="col-3"><button class="btn btn-tecla btn-numero" data-val="0">0</button></div>
+                            <div class="col-3"><button class="btn btn-tecla btn-numero" data-val=".">.</button></div>
+                            <div class="col-3"><button class="btn btn-tecla btn-operador" data-val="+">+</button></div>
+                            <div class="col-3"><button class="btn btn-tecla btn-igual" data-val="=">=</button></div>
+                        </div>
+
+                        <!-- Fila 8: Botones de Control -->
+                        <div class="row g-2">
+                            <div class="col-6">
+                                <button class="btn btn-danger w-100 py-2" id="btn-limpiar">
+                                    <strong>Limpiar</strong>
+                                </button>
+                            </div>
+                            <div class="col-6">
+                                <button class="btn btn-warning w-100 py-2" id="btn-borrar">
+                                    <strong>⌫ Borrar</strong>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Botón de Análisis Principal -->
+                    <div class="mt-4">
+                        <button class="btn btn-success w-100 py-3 fw-bold fs-5" id="btn-analizar">
+                            🧠 ANALIZAR EXPRESIÓN
+                        </button>
+                    </div>
+
+                    <!-- Ejemplos Rápidos -->
+                    <div class="mt-4">
+                        <h6 class="fw-bold text-dark mb-3">📋 Ejemplos para probar:</h6>
+                        <div class="d-flex flex-column gap-2">
+                            <button class="btn btn-outline-primary ejemplo-rapido text-start" data-ejemplo="(3+5)×2">
+                                <small>(3+5)×2 → Paréntesis y multiplicación</small>
+                            </button>
+                            <button class="btn btn-outline-primary ejemplo-rapido text-start" data-ejemplo="4²+3×2">
+                                <small>4²+3×2 → Potencias y multiplicación</small>
+                            </button>
+                            <button class="btn btn-outline-primary ejemplo-rapido text-start" data-ejemplo="√(16)+5">
+                                <small>√(16)+5 → Raíz cuadrada y suma</small>
+                            </button>
+                            <button class="btn btn-outline-primary ejemplo-rapido text-start" data-ejemplo="2×(3+4²)">
+                                <small>2×(3+4²) → Expresión compleja</small>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Panel Derecho: Análisis Paso a Paso -->
+            <div class="col-lg-8 p-0">
+                <div class="p-4">
+                    <h3 class="fw-bold mb-4 text-dark">📊 Análisis Psicopedagógico</h3>
+                    
+                    <!-- Barra de Estado -->
+                    <div class="alert alert-info d-flex align-items-center mb-4">
+                        <div class="me-3">📝</div>
+                        <div class="flex-grow-1">
+                            <strong>Estado:</strong> 
+                            <span id="estado-analisis">Esperando expresión matemática</span>
+                        </div>
+                    </div>
+
+                    <!-- Navegación de Pasos -->
+                    <div class="card mb-4">
+                        <div class="card-body py-3">
+                            <div class="d-flex justify-content-between align-items-center">
+                                <h5 class="mb-0 fw-bold">Progreso del Análisis</h5>
+                                <div class="d-flex gap-2">
+                                    <button class="btn btn-outline-primary btn-sm" id="btn-prev-paso" disabled>
+                                        ← Anterior
+                                    </button>
+                                    <button class="btn btn-outline-primary btn-sm" id="btn-next-paso" disabled>
+                                        Siguiente →
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Contenedor Principal de Análisis -->
+                    <div id="contenedor-analisis">
+                        <!-- Vista Inicial -->
+                        <div class="text-center text-muted py-5" id="vista-inicial">
+                            <div class="mb-4">
+                                <div style="font-size: 4rem;">🔍</div>
+                            </div>
+                            <h4 class="mb-3">Comienza tu análisis matemático</h4>
+                            <p class="fs-5">
+                                Escribe una expresión matemática en la calculadora y haz clic en 
+                                <strong>"Analizar Expresión"</strong> para ver el desglose paso a paso 
+                                con explicaciones psicopedagógicas.
+                            </p>
+                            <div class="mt-4 p-3 bg-light rounded">
+                                <small>
+                                    <strong>Enfoque COPISI:</strong> Cada paso incluirá representaciones 
+                                    <strong>Concretas, Pictóricas y Simbólicas</strong> para una comprensión completa.
+                                </small>
+                            </div>
+                        </div>
+
+                        <!-- Análisis Dinámico (se llenará con JavaScript) -->
+                        <div id="analisis-dinamico" style="display: none;">
+                            <!-- Aquí se insertará el análisis paso a paso -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <div id="footer"></div>
+
+    <!-- Scripts -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="assets/js/calculadora.js"></script>
+    <script src="assets/js/analisis.js"></script>
+    <script src="assets/js/main.js"></script>
+</body>
+</html>

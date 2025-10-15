@@ -1,0 +1,81 @@
+/* === HOME PAGE STYLES === */
+
+body {
+  font-family: 'Nunito', sans-serif;
+}
+
+/* HERO */
+.hero {
+  background: linear-gradient(135deg, #4fc3f7, #a5d6a7);
+  color: #fff;
+  height: 80vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-shadow: 1px 1px 3px rgba(0,0,0,0.3);
+  animation: fadeIn 1s ease-in-out;
+}
+
+.hero h1 {
+  font-size: 2.5rem;
+  font-weight: 700;
+}
+
+.hero p {
+  font-size: 1.2rem;
+  margin-bottom: 20px;
+}
+
+/* BENEFICIOS */
+.beneficios h2 {
+  color: #007b83;
+  font-weight: 700;
+}
+
+.beneficios .card {
+  transition: transform 0.2s ease;
+  border-radius: 1rem;
+}
+
+.beneficios .card:hover {
+  transform: scale(1.05);
+}
+
+.icono {
+  width: 60px;
+  height: 60px;
+  object-fit: contain;
+}
+
+/* ACTIVIDADES DESTACADAS */
+.actividades-destacadas {
+  background-color: #f9f9f9;
+}
+
+.actividades-destacadas h2 {
+  color: #3f51b5;
+}
+
+.actividades-destacadas .card {
+  border-radius: 1rem;
+  transition: 0.3s;
+}
+
+.actividades-destacadas .card:hover {
+  transform: translateY(-5px);
+}
+
+/* MENSAJE FINAL */
+.mensaje-final {
+  background-color: #e3f2fd;
+}
+
+.mensaje-final h3 {
+  color: #1565c0;
+  font-weight: 600;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}

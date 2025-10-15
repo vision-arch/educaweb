@@ -1,0 +1,26 @@
+[
+  {
+    "nivel": "prebasica",
+    "asignatura": "lenguaje",
+    "titulo": "Aprendemos las Vocales",
+    "descripcion": "Juego interactivo para reconocer y pronunciar las vocales.",
+    "url": "https://wordwall.net/es/resource/11366189",
+    "icono": "https://cdn-icons-png.flaticon.com/512/2873/2873469.png"
+  },
+  {
+    "nivel": "basica",
+    "asignatura": "matematicas",
+    "titulo": "Sumas y Restas Básicas",
+    "descripcion": "Actividad divertida para practicar operaciones simples.",
+    "url": "https://wordwall.net/es/resource/10435294",
+    "icono": "https://cdn-icons-png.flaticon.com/512/3135/3135715.png"
+  },
+  {
+    "nivel": "media",
+    "asignatura": "ciencias",
+    "titulo": "El Sistema Solar",
+    "descripcion": "Explora los planetas con este quiz espacial.",
+    "url": "https://wordwall.net/es/resource/13654785",
+    "icono": "https://cdn-icons-png.flaticon.com/512/2942/2942809.png"
+  }
+]

@@ -1,0 +1,27 @@
+h1 {
+  color: #3f51b5;
+  font-weight: 700;
+}
+
+#nivelSelect {
+  font-size: 1.1rem;
+  padding: 0.5rem 1rem;
+}
+
+.card {
+  border-radius: 1rem;
+  transition: 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+}
+
+iframe {
+  border-radius: 0.5rem;
+}
+
+.ratio {
+  background-color: #f8f9fa;
+  border-radius: 0.5rem;
+}
