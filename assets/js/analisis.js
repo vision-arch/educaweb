@@ -1,4 +1,4 @@
-// ===== ANALIZADOR MATEMÁTICO PASO A PASO =====
+// ===== ANALIZADOR MATEMÁTICO COMPLETO =====
 class AnalizadorMatematico {
     constructor() {
         this.pasos = [];
@@ -43,7 +43,7 @@ class AnalizadorMatematico {
 
             this.analizarEstructuraGeneral(expresion);
             this.analizarComponentesEspecificos(expresion);
-            this.generarProcesoResolucion(expresionComputable);
+            this.generarProcesoResolucionCompleto(expresion);
             this.generarReflexionFinal(expresion);
 
             this.mostrarAnalisis();
@@ -72,7 +72,7 @@ class AnalizadorMatematico {
     generarAnalisisEstructural(expresion) {
         const componentes = this.identificarComponentes(expresion);
         let html = `
-            <div class="expresion-destacada">
+            <div class="expresion-principal">
                 ${this.destacarElementos(expresion)}
             </div>
             <div class="explicacion-paso">
@@ -82,13 +82,17 @@ class AnalizadorMatematico {
                 </ul>
             </div>
             <div class="explicacion-paso">
-                <h6>🎯 Orden de Operaciones (PEMDAS):</h6>
+                <h6>🎯 Orden de Operaciones (PAPOMUDAS):</h6>
                 <ol>
-                    <li><strong>Paréntesis</strong> - Operaciones dentro de () primero</li>
-                    <li><strong>Exponentes</strong> - Potencias y raíces</li>
-                    <li><strong>Multiplicación y División</strong> - De izquierda a derecha</li>
-                    <li><strong>Suma y Resta</strong> - De izquierda a derecha</li>
+                    <li><strong>P</strong>aréntesis - Operaciones dentro de () primero</li>
+                    <li><strong>A</strong>potencias - Exponentes y raíces</li>
+                    <li><strong>PO</strong>tencias - Potencias (continuación)</li>
+                    <li><strong>M</strong>ultiplicación - De izquierda a derecha</li>
+                    <li><strong>D</strong>ivisión - De izquierda a derecha</li>
+                    <li><strong>A</strong>sumas - Sumas</li>
+                    <li><strong>S</strong>ustracciones - Restas</li>
                 </ol>
+                <p class="mt-2"><em>Recordatorio: Multiplicación y división tienen igual prioridad, se resuelven de izquierda a derecha. Lo mismo para suma y resta.</em></p>
             </div>
         `;
         return html;
@@ -99,6 +103,7 @@ class AnalizadorMatematico {
             parentesis: this.contarParentesis(expresion),
             operadores: this.identificarOperadores(expresion),
             funciones: this.identificarFunciones(expresion),
+            constantes: this.identificarConstantes(expresion),
             numeros: this.identificarNumeros(expresion)
         };
 
@@ -107,10 +112,14 @@ class AnalizadorMatematico {
             lista.push(`<strong>${componentes.parentesis.total} paréntesis</strong> - Agrupan operaciones prioritarias`);
         }
         if (componentes.operadores.length > 0) {
-            lista.push(`<strong>${componentes.operadores.length} operadores</strong> - ${componentes.operadores.join(', ')}`);
+            const operadoresUnicos = [...new Set(componentes.operadores)];
+            lista.push(`<strong>${componentes.operadores.length} operadores</strong> - ${operadoresUnicos.join(', ')}`);
         }
         if (componentes.funciones.length > 0) {
             lista.push(`<strong>Funciones matemáticas</strong> - ${componentes.funciones.join(', ')}`);
+        }
+        if (componentes.constantes.length > 0) {
+            lista.push(`<strong>Constantes</strong> - ${componentes.constantes.join(', ')}`);
         }
         if (componentes.numeros.length > 0) {
             lista.push(`<strong>${componentes.numeros.length} números</strong> - Valores a operar`);
@@ -137,7 +146,8 @@ class AnalizadorMatematico {
 
     descomponerExpresion(expresion) {
         const componentes = [];
-        const regex = /(\(|\)|\+|\-|\×|\÷|\^|²|³|√|sin|cos|tan|log|\d+\.?\d*)/g;
+        // Regex mejorado para capturar todos los componentes
+        const regex = /(\(|\)|\+|\-|\×|\÷|\^|²|³|√|sin|cos|tan|log|π|e|\d+\.?\d*)/g;
         let match;
         
         while ((match = regex.exec(expresion)) !== null) {
@@ -158,6 +168,7 @@ class AnalizadorMatematico {
         if (['^', '²', '³'].includes(valor)) return 'potencia';
         if (valor === '√') return 'raiz';
         if (['sin', 'cos', 'tan', 'log'].includes(valor)) return 'funcion';
+        if (['π', 'e'].includes(valor)) return 'constante';
         if (!isNaN(valor) || !isNaN(parseFloat(valor))) return 'numero';
         return 'desconocido';
     }
@@ -169,6 +180,7 @@ class AnalizadorMatematico {
             'potencia': '⚡',
             'raiz': '√',
             'funcion': '𝑓',
+            'constante': 'π',
             'numero': '🔢'
         };
         return iconos[tipo] || '❓';
@@ -180,7 +192,8 @@ class AnalizadorMatematico {
             'operador': 'OPERADOR',
             'potencia': 'POTENCIA',
             'raiz': 'RAÍZ',
-            'funcion': 'FUNCIÓN'
+            'funcion': 'FUNCIÓN',
+            'constante': 'CONSTANTE'
         };
         return nombres[tipo] || 'COMPONENTE';
     }
@@ -197,6 +210,8 @@ class AnalizadorMatematico {
                 return this.analizarRaiz(componente);
             case 'funcion':
                 return this.analizarFuncion(componente);
+            case 'constante':
+                return this.analizarConstante(componente);
             default:
                 return this.analisisGenerico(componente);
         }
@@ -206,14 +221,14 @@ class AnalizadorMatematico {
     analizarParentesis(componente, expresion) {
         const esApertura = componente.valor === '(';
         const explicacion = esApertura ? 
-            "Los paréntesis <strong>agrupan operaciones</strong> que deben resolverse primero según PEMDAS" :
+            "Los paréntesis <strong>agrupan operaciones</strong> que deben resolverse primero según PAPOMUDAS" :
             "Este paréntesis <strong>cierra un grupo</strong> de operaciones prioritarias";
         
         return `
             <div class="explicacion-paso">
                 <h6>🎯 Función de los Paréntesis:</h6>
                 <p>${explicacion}</p>
-                <p><strong>Regla PEMDAS:</strong> Los paréntesis tienen la máxima prioridad en el orden de operaciones</p>
+                <p><strong>Regla PAPOMUDAS:</strong> Los paréntesis tienen la máxima prioridad en el orden de operaciones</p>
                 <p><strong>¿Por qué es importante?</strong> Sin paréntesis, las operaciones se realizarían en un orden diferente, cambiando completamente el resultado.</p>
             </div>
             <div class="pregunta-reflexiva">
@@ -229,13 +244,13 @@ class AnalizadorMatematico {
                 nombre: 'Suma', 
                 concepto: 'combinar cantidades', 
                 ejemplo: 'Si tienes 3 manzanas y compras 2 más, tienes 3 + 2 = 5 manzanas',
-                prioridad: 'Media - Después de multiplicación y división'
+                prioridad: 'Última - Después de multiplicación y división'
             },
             '-': { 
                 nombre: 'Resta', 
                 concepto: 'encontrar la diferencia o quitar', 
                 ejemplo: 'Si tienes 5 galletas y comes 2, te quedan 5 - 2 = 3 galletas',
-                prioridad: 'Media - Después de multiplicación y división'
+                prioridad: 'Última - Después de multiplicación y división'
             },
             '×': { 
                 nombre: 'Multiplicación', 
@@ -263,7 +278,7 @@ class AnalizadorMatematico {
                 <h6>🎯 Operador: ${info.nombre}</h6>
                 <p><strong>Concepto:</strong> ${info.concepto}</p>
                 <p><strong>Ejemplo práctico:</strong> ${info.ejemplo}</p>
-                <p><strong>Prioridad PEMDAS:</strong> ${info.prioridad}</p>
+                <p><strong>Prioridad PAPOMUDAS:</strong> ${info.prioridad}</p>
             </div>
             <div class="pregunta-reflexiva">
                 <strong>💭 Pregunta para reflexionar:</strong><br>
@@ -292,7 +307,7 @@ class AnalizadorMatematico {
                 <h6>⚡ Análisis de Potencia</h6>
                 <p>${explicacion}</p>
                 <p><strong>Ejemplo:</strong> ${ejemplo}</p>
-                <p><strong>Prioridad PEMDAS:</strong> Las potencias se resuelven después de los paréntesis pero antes de multiplicaciones y divisiones</p>
+                <p><strong>Prioridad PAPOMUDAS:</strong> Las potencias se resuelven después de los paréntesis pero antes de multiplicaciones y divisiones</p>
             </div>
             <div class="pregunta-reflexiva">
                 <strong>💭 Pregunta para reflexionar:</strong><br>
@@ -308,7 +323,7 @@ class AnalizadorMatematico {
                 <p>La raíz cuadrada encuentra <strong>qué número multiplicado por sí mismo</strong> da el valor dentro de la raíz</p>
                 <p><strong>Ejemplo:</strong> √16 = 4 porque 4 × 4 = 16</p>
                 <p><strong>Concepto práctico:</strong> Si un cuadrado tiene área 25 cm², cada lado mide √25 = 5 cm</p>
-                <p><strong>Prioridad PEMDAS:</strong> Misma prioridad que las potencias</p>
+                <p><strong>Prioridad PAPOMUDAS:</strong> Misma prioridad que las potencias</p>
             </div>
             <div class="pregunta-reflexiva">
                 <strong>💭 Pregunta para reflexionar:</strong><br>
@@ -322,29 +337,34 @@ class AnalizadorMatematico {
             'sin': {
                 nombre: 'Seno',
                 concepto: 'Relación entre el lado opuesto y la hipotenusa en un triángulo rectángulo',
-                aplicacion: 'Cálculo de alturas, ondas sonoras, movimiento oscilatorio'
+                aplicacion: 'Cálculo de alturas, ondas sonoras, movimiento oscilatorio',
+                ejemplo: 'sin(30°) = 0.5'
             },
             'cos': {
                 nombre: 'Coseno', 
                 concepto: 'Relación entre el lado adyacente y la hipotenusa',
-                aplicacion: 'Cálculo de distancias, ingeniería, gráficos por computadora'
+                aplicacion: 'Cálculo de distancias, ingeniería, gráficos por computadora',
+                ejemplo: 'cos(60°) = 0.5'
             },
             'tan': {
                 nombre: 'Tangente',
                 concepto: 'Relación entre el lado opuesto y el adyacente',
-                aplicacion: 'Cálculo de pendientes, ángulos de elevación, navegación'
+                aplicacion: 'Cálculo de pendientes, ángulos de elevación, navegación',
+                ejemplo: 'tan(45°) = 1'
             },
             'log': {
                 nombre: 'Logaritmo',
-                concepto: 'Exponente al que hay que elevar la base para obtener el número',
-                aplicacion: 'Escalas logarítmicas, crecimiento exponencial, decibelios'
+                concepto: 'Exponente al que hay que elevar 10 para obtener el número',
+                aplicacion: 'Escalas logarítmicas, crecimiento exponencial, decibelios',
+                ejemplo: 'log(100) = 2 porque 10² = 100'
             }
         };
 
         const info = funciones[funcion.valor] || { 
             nombre: 'Función', 
             concepto: 'función matemática', 
-            aplicacion: 'aplicaciones matemáticas' 
+            aplicacion: 'aplicaciones matemáticas',
+            ejemplo: 'ejemplo de función'
         };
 
         return `
@@ -352,11 +372,53 @@ class AnalizadorMatematico {
                 <h6>𝑓 Función ${info.nombre}</h6>
                 <p><strong>Concepto:</strong> ${info.concepto}</p>
                 <p><strong>Aplicación práctica:</strong> ${info.aplicacion}</p>
+                <p><strong>Ejemplo:</strong> ${info.ejemplo}</p>
                 <p><strong>Enfoque psicopedagógico:</strong> Las funciones nos ayudan a modelar situaciones reales con matemáticas</p>
             </div>
             <div class="pregunta-reflexiva">
                 <strong>💭 Pregunta para reflexionar:</strong><br>
                 ¿En qué situaciones de tu vida diaria podrías aplicar la función ${info.nombre.toLowerCase()}?
+            </div>
+        `;
+    }
+
+    analizarConstante(constante) {
+        const constantes = {
+            'π': {
+                nombre: 'Pi (π)',
+                valor: '3.1416...',
+                concepto: 'Relación entre la circunferencia y el diámetro de un círculo',
+                aplicacion: 'Cálculos de círculos, esferas, ondas, física e ingeniería',
+                ejemplo: 'Área del círculo = π × r²'
+            },
+            'e': {
+                nombre: 'Número de Euler (e)',
+                valor: '2.7182...',
+                concepto: 'Base de los logaritmos naturales, aparece en crecimiento exponencial',
+                aplicacion: 'Cálculo de intereses, crecimiento poblacional, ecuaciones diferenciales',
+                ejemplo: 'Interés compuesto: A = P × e^(rt)'
+            }
+        };
+
+        const info = constantes[constante.valor] || { 
+            nombre: 'Constante', 
+            valor: '?', 
+            concepto: 'constante matemática', 
+            aplicacion: 'aplicaciones matemáticas',
+            ejemplo: 'ejemplo de constante'
+        };
+
+        return `
+            <div class="explicacion-paso">
+                <h6>${constante.valor} Constante ${info.nombre}</h6>
+                <p><strong>Valor aproximado:</strong> ${info.valor}</p>
+                <p><strong>Concepto:</strong> ${info.concepto}</p>
+                <p><strong>Aplicación práctica:</strong> ${info.aplicacion}</p>
+                <p><strong>Ejemplo:</strong> ${info.ejemplo}</p>
+            </div>
+            <div class="pregunta-reflexiva">
+                <strong>💭 Pregunta para reflexionar:</strong><br>
+                ¿Por qué crees que la constante ${info.nombre} es importante en matemáticas y ciencias?
             </div>
         `;
     }
@@ -371,28 +433,30 @@ class AnalizadorMatematico {
         `;
     }
 
-    // ===== PROCESO DE RESOLUCIÓN =====
-    generarProcesoResolucion(expresionComputable) {
+    // ===== PROCESO DE RESOLUCIÓN COMPLETO =====
+    generarProcesoResolucionCompleto(expresion) {
         this.pasos.push({
             tipo: 'resolucion',
             titulo: '🔄 Proceso de Resolución Paso a Paso',
-            contenido: this.generarPasosResolucion(expresionComputable),
+            contenido: this.generarResolucionCompleta(expresion),
             expresion: this.expresionOriginal
         });
     }
 
-    generarPasosResolucion(expresion) {
+    generarResolucionCompleta(expresionOriginal) {
         try {
-            const pasosResolucion = this.simularResolucionPasoAPaso(expresion);
+            const pasosResolucion = this.calcularPasosRealmente(expresionOriginal);
+            
             let html = '<div class="proceso-resolucion">';
             
             pasosResolucion.forEach((paso, index) => {
                 html += `
-                    <div class="paso-resolucion ${index === pasosResolucion.length - 1 ? 'final' : ''}">
+                    <div class="paso-resolucion ${paso.esResultadoFinal ? 'final' : ''}">
                         <div class="numero-paso">${index + 1}</div>
                         <div class="contenido-paso">
                             <div class="expresion-paso">${paso.expresion}</div>
                             <div class="explicacion-paso">${paso.explicacion}</div>
+                            ${paso.operacion ? `<div class="operacion-realizada">${paso.operacion}</div>` : ''}
                             ${paso.subpasos ? `
                                 <div class="subpasos">
                                     ${paso.subpasos.map(sub => `<div class="subpaso">• ${sub}</div>`).join('')}
@@ -410,83 +474,101 @@ class AnalizadorMatematico {
         }
     }
 
-    simularResolucionPasoAPaso(expresion) {
+    calcularPasosRealmente(expresion) {
         const pasos = [];
+        let expresionActual = expresion;
         
         // Paso 1: Análisis inicial
         pasos.push({
-            expresion: this.destacarElementos(this.expresionOriginal),
-            explicacion: "Comenzamos analizando la expresión completa e identificando todos los componentes",
+            expresion: this.destacarElementos(expresionActual),
+            explicacion: "Comenzamos analizando la expresión completa",
             subpasos: [
-                "Identificamos números, operadores y símbolos especiales",
-                "Reconocemos la estructura general de la expresión",
-                "Planificamos el orden de resolución según PEMDAS"
+                "Identificamos todos los componentes matemáticos",
+                "Aplicamos el orden PAPOMUDAS para planificar la resolución",
+                "Preparamos la expresión para el cálculo paso a paso"
             ]
         });
-        
-        // Paso 2: Paréntesis
-        if (this.expresionOriginal.includes('(')) {
-            pasos.push({
-                expresion: this.destacarElementos(this.expresionOriginal, ['(', ')']),
-                explicacion: "Resolvemos primero las operaciones dentro de paréntesis (máxima prioridad en PEMDAS)",
-                subpasos: [
-                    "Localizamos todos los grupos entre paréntesis",
-                    "Resolvemos las operaciones dentro de cada paréntesis",
-                    "Reemplazamos los paréntesis por sus resultados"
-                ]
-            });
+
+        // Resolver constantes primero
+        if (expresionActual.includes('π') || expresionActual.includes('e')) {
+            const constanteInfo = this.resolverConstantes(expresionActual);
+            if (constanteInfo) {
+                pasos.push({
+                    expresion: constanteInfo.nuevaExpresion,
+                    explicacion: "Reemplazamos constantes matemáticas por sus valores aproximados",
+                    operacion: constanteInfo.operacion,
+                    subpasos: [
+                        "Identificamos las constantes en la expresión",
+                        "Reemplazamos cada constante por su valor numérico",
+                        "Continuamos con la expresión simplificada"
+                    ]
+                });
+                expresionActual = constanteInfo.nuevaExpresion;
+            }
         }
-        
-        // Paso 3: Exponentes y raíces
-        if (this.expresionOriginal.match(/\^|\²|\³|√/)) {
-            pasos.push({
-                expresion: this.destacarElementos(this.expresionOriginal, ['^', '²', '³', '√']),
-                explicacion: "Aplicamos potencias y raíces (segunda prioridad en PEMDAS)",
-                subpasos: [
-                    "Identificamos todas las potencias y raíces",
-                    "Las resolvemos de izquierda a derecha",
-                    "Sustituimos los resultados en la expresión"
-                ]
-            });
+
+        // Resolver funciones
+        const pasosFunciones = this.resolverFunciones(expresionActual);
+        if (pasosFunciones.length > 0) {
+            pasos.push(...pasosFunciones);
+            expresionActual = pasosFunciones[pasosFunciones.length - 1].expresion;
         }
-        
-        // Paso 4: Multiplicación y división
-        if (this.expresionOriginal.match(/×|÷/)) {
-            pasos.push({
-                expresion: this.destacarElementos(this.expresionOriginal, ['×', '÷']),
-                explicacion: "Realizamos multiplicaciones y divisiones (tercera prioridad en PEMDAS)",
-                subpasos: [
-                    "Identificamos multiplicaciones y divisiones",
-                    "Las resolvemos de izquierda a derecha",
-                    "Aplicamos las operaciones en el orden correcto"
-                ]
-            });
+
+        // Resolver paréntesis recursivamente
+        while (expresionActual.includes('(')) {
+            const parentesisInfo = this.resolverParentesis(expresionActual);
+            if (parentesisInfo) {
+                pasos.push({
+                    expresion: parentesisInfo.nuevaExpresion,
+                    explicacion: "Resolvemos las operaciones dentro de paréntesis (primera prioridad en PAPOMUDAS)",
+                    operacion: parentesisInfo.operacion,
+                    subpasos: [
+                        "Localizamos el paréntesis más interno",
+                        "Resolvemos las operaciones dentro del paréntesis",
+                        "Reemplazamos el paréntesis por su resultado"
+                    ]
+                });
+                expresionActual = parentesisInfo.nuevaExpresion;
+            } else {
+                break;
+            }
         }
-        
-        // Paso 5: Suma y resta
-        if (this.expresionOriginal.match(/\+|\-/)) {
-            pasos.push({
-                expresion: this.destacarElementos(this.expresionOriginal, ['+', '-']),
-                explicacion: "Finalmente, realizamos sumas y restas (última prioridad en PEMDAS)",
-                subpasos: [
-                    "Identificamos sumas y restas",
-                    "Las resolvemos de izquierda a derecha",
-                    "Completamos todas las operaciones"
-                ]
-            });
+
+        // Resolver potencias y raíces
+        const pasosPotencia = this.resolverPotenciasYRaices(expresionActual);
+        if (pasosPotencia.length > 0) {
+            pasos.push(...pasosPotencia);
+            expresionActual = pasosPotencia[pasosPotencia.length - 1].expresion;
         }
-        
-        // Paso final
+
+        // Resolver multiplicaciones y divisiones
+        const pasosMultDiv = this.resolverMultiplicacionesDivisiones(expresionActual);
+        if (pasosMultDiv.length > 0) {
+            pasos.push(...pasosMultDiv);
+            expresionActual = pasosMultDiv[pasosMultDiv.length - 1].expresion;
+        }
+
+        // Resolver sumas y restas
+        const pasosSumaResta = this.resolverSumasRestas(expresionActual);
+        if (pasosSumaResta.length > 0) {
+            pasos.push(...pasosSumaResta);
+            expresionActual = pasosSumaResta[pasosSumaResta.length - 1].expresion;
+        }
+
+        // Paso final: Mostrar resultado
         try {
-            const resultado = this.evaluarExpresionSegura(expresion);
+            const expresionComputable = this.prepararExpresionParaEvaluacion(expresionActual);
+            const resultado = this.evaluarExpresionSegura(expresionComputable);
             pasos.push({
-                expresion: `<strong class="resultado-final">Resultado: ${resultado}</strong>`,
-                explicacion: "¡Hemos completado todas las operaciones! El proceso nos llevó a la solución final aplicando correctamente el orden de operaciones.",
+                expresion: `<strong class="resultado-final">= ${resultado}</strong>`,
+                explicacion: "¡Hemos completado todas las operaciones aplicando correctamente el orden PAPOMUDAS!",
+                operacion: `Resultado final: ${expresionActual} = ${resultado}`,
                 subpasos: [
                     "Verificamos que todas las operaciones estén completas",
-                    "Confirmamos que seguimos el orden PEMDAS correctamente",
-                    "Validamos que el resultado tiene sentido matemáticamente"
-                ]
+                    "Confirmamos que seguimos el orden PAPOMUDAS correctamente",
+                    "Validamos que el resultado es matemáticamente correcto"
+                ],
+                esResultadoFinal: true
             });
         } catch (error) {
             pasos.push({
@@ -497,6 +579,382 @@ class AnalizadorMatematico {
         }
         
         return pasos;
+    }
+
+    resolverConstantes(expresion) {
+        let nuevaExpresion = expresion;
+        let operaciones = [];
+        
+        if (expresion.includes('π')) {
+            nuevaExpresion = nuevaExpresion.replace(/π/g, Math.PI.toString());
+            operaciones.push('π = ' + Math.PI.toFixed(6));
+        }
+        
+        if (expresion.includes('e')) {
+            nuevaExpresion = nuevaExpresion.replace(/e/g, Math.E.toString());
+            operaciones.push('e = ' + Math.E.toFixed(6));
+        }
+        
+        if (operaciones.length > 0) {
+            return {
+                nuevaExpresion: nuevaExpresion,
+                operacion: operaciones.join(', ')
+            };
+        }
+        
+        return null;
+    }
+
+    resolverFunciones(expresion) {
+        const pasos = [];
+        let expresionActual = expresion;
+        
+        // Buscar funciones trigonométricas y logaritmos
+        const regexFuncion = /(sin|cos|tan|log)\(([^()]+)\)/g;
+        let match;
+        
+        while ((match = regexFuncion.exec(expresionActual)) !== null) {
+            const funcion = match[1];
+            const argumento = match[2];
+            
+            // Evaluar el argumento primero
+            let valorArgumento;
+            try {
+                const argumentoComputable = this.prepararExpresionParaEvaluacion(argumento);
+                valorArgumento = this.evaluarExpresionSegura(argumentoComputable);
+            } catch (error) {
+                continue;
+            }
+            
+            // Calcular la función
+            let resultado;
+            switch (funcion) {
+                case 'sin':
+                    resultado = Math.sin(valorArgumento * Math.PI / 180); // Convertir a radianes si está en grados
+                    break;
+                case 'cos':
+                    resultado = Math.cos(valorArgumento * Math.PI / 180);
+                    break;
+                case 'tan':
+                    resultado = Math.tan(valorArgumento * Math.PI / 180);
+                    break;
+                case 'log':
+                    resultado = Math.log10(valorArgumento);
+                    break;
+                default:
+                    resultado = 0;
+            }
+            
+            resultado = this.formatearNumero(resultado);
+            
+            const nuevaExpresion = expresionActual.replace(match[0], resultado.toString());
+            pasos.push({
+                expresion: nuevaExpresion,
+                explicacion: `Resolvemos la función ${funcion} (prioridad alta en PAPOMUDAS)`,
+                operacion: `${funcion}(${argumento}) = ${resultado}`,
+                subpasos: [
+                    `Calculamos el argumento: ${argumento} = ${valorArgumento}`,
+                    `Aplicamos la función: ${funcion}(${valorArgumento}) = ${resultado}`,
+                    "Reemplazamos en la expresión"
+                ]
+            });
+            
+            expresionActual = nuevaExpresion;
+            regexFuncion.lastIndex = 0;
+        }
+        
+        return pasos;
+    }
+
+    resolverParentesis(expresion) {
+        const ultimoApertura = expresion.lastIndexOf('(');
+        if (ultimoApertura === -1) return null;
+        
+        const cierreCorrespondiente = expresion.indexOf(')', ultimoApertura);
+        if (cierreCorrespondiente === -1) return null;
+        
+        const dentroParentesis = expresion.substring(ultimoApertura + 1, cierreCorrespondiente);
+        
+        // Resolver la expresión dentro del paréntesis recursivamente
+        let expresionInterna = dentroParentesis;
+        
+        // Resolver funciones dentro del paréntesis
+        const pasosFunciones = this.resolverFunciones(expresionInterna);
+        if (pasosFunciones.length > 0) {
+            expresionInterna = pasosFunciones[pasosFunciones.length - 1].expresion;
+        }
+        
+        // Resolver potencias dentro del paréntesis
+        const pasosPotencia = this.resolverPotenciasYRaices(expresionInterna);
+        if (pasosPotencia.length > 0) {
+            expresionInterna = pasosPotencia[pasosPotencia.length - 1].expresion;
+        }
+        
+        // Resolver multiplicaciones y divisiones dentro del paréntesis
+        const pasosMultDiv = this.resolverMultiplicacionesDivisiones(expresionInterna);
+        if (pasosMultDiv.length > 0) {
+            expresionInterna = pasosMultDiv[pasosMultDiv.length - 1].expresion;
+        }
+        
+        // Resolver sumas y restas dentro del paréntesis
+        const pasosSumaResta = this.resolverSumasRestas(expresionInterna);
+        if (pasosSumaResta.length > 0) {
+            expresionInterna = pasosSumaResta[pasosSumaResta.length - 1].expresion;
+        }
+        
+        const resultado = this.evaluarExpresionSegura(this.prepararExpresionParaEvaluacion(expresionInterna));
+        
+        const nuevaExpresion = expresion.substring(0, ultimoApertura) + 
+                              resultado + 
+                              expresion.substring(cierreCorrespondiente + 1);
+        
+        return {
+            nuevaExpresion: nuevaExpresion,
+            operacion: `(${dentroParentesis}) = ${resultado}`
+        };
+    }
+
+    resolverPotenciasYRaices(expresion) {
+        const pasos = [];
+        let expresionActual = expresion;
+        
+        // Buscar raíces cuadradas
+        const regexRaiz = /√\(([^()]+)\)/g;
+        let matchRaiz;
+        
+        while ((matchRaiz = regexRaiz.exec(expresionActual)) !== null) {
+            const argumento = matchRaiz[1];
+            let valorArgumento;
+            
+            try {
+                const argumentoComputable = this.prepararExpresionParaEvaluacion(argumento);
+                valorArgumento = this.evaluarExpresionSegura(argumentoComputable);
+            } catch (error) {
+                continue;
+            }
+            
+            const resultado = Math.sqrt(valorArgumento);
+            const nuevaExpresion = expresionActual.replace(matchRaiz[0], resultado.toString());
+            
+            pasos.push({
+                expresion: nuevaExpresion,
+                explicacion: "Resolvemos raíces cuadradas (segunda prioridad en PAPOMUDAS)",
+                operacion: `√(${argumento}) = ${resultado}`,
+                subpasos: [
+                    `Calculamos: √(${valorArgumento}) = ${resultado}`,
+                    "Reemplazamos en la expresión"
+                ]
+            });
+            
+            expresionActual = nuevaExpresion;
+            regexRaiz.lastIndex = 0;
+        }
+        
+        // Buscar potencias
+        const regexPotencia = /(\d+(?:\.\d+)?)\s*(\^|\²|\³)\s*(\d+(?:\.\d+)?)?/g;
+        let matchPotencia;
+        
+        while ((matchPotencia = regexPotencia.exec(expresionActual)) !== null) {
+            const base = parseFloat(matchPotencia[1]);
+            const operador = matchPotencia[2];
+            let exponente, resultado;
+            
+            if (operador === '²') {
+                exponente = 2;
+                resultado = base * base;
+            } else if (operador === '³') {
+                exponente = 3;
+                resultado = base * base * base;
+            } else {
+                exponente = parseFloat(matchPotencia[3]);
+                resultado = Math.pow(base, exponente);
+            }
+            
+            resultado = this.formatearNumero(resultado);
+            
+            const nuevaExpresion = expresionActual.replace(matchPotencia[0], resultado.toString());
+            pasos.push({
+                expresion: nuevaExpresion,
+                explicacion: "Resolvemos potencias (segunda prioridad en PAPOMUDAS)",
+                operacion: `${matchPotencia[0]} = ${resultado}`,
+                subpasos: [
+                    `Calculamos: ${base} elevado a ${exponente} = ${resultado}`,
+                    "Reemplazamos en la expresión"
+                ]
+            });
+            
+            expresionActual = nuevaExpresion;
+            regexPotencia.lastIndex = 0;
+        }
+        
+        return pasos;
+    }
+
+    resolverMultiplicacionesDivisiones(expresion) {
+        const pasos = [];
+        let expresionActual = expresion;
+        
+        // Buscar multiplicaciones y divisiones
+        const regexMultDiv = /(\d+(?:\.\d+)?)\s*([×÷])\s*(\d+(?:\.\d+)?)/g;
+        let match;
+        
+        while ((match = regexMultDiv.exec(expresionActual)) !== null) {
+            const izquierda = parseFloat(match[1]);
+            const operador = match[2];
+            const derecha = parseFloat(match[3]);
+            let resultado;
+            
+            if (operador === '×') {
+                resultado = izquierda * derecha;
+            } else {
+                if (derecha === 0) {
+                    throw new Error('División por cero');
+                }
+                resultado = izquierda / derecha;
+            }
+            
+            resultado = this.formatearNumero(resultado);
+            
+            const nuevaExpresion = expresionActual.replace(match[0], resultado.toString());
+            pasos.push({
+                expresion: nuevaExpresion,
+                explicacion: "Resolvemos multiplicaciones y divisiones (tercera prioridad en PAPOMUDAS)",
+                operacion: `${match[0]} = ${resultado}`,
+                subpasos: [
+                    `Realizamos la operación: ${izquierda} ${operador} ${derecha} = ${resultado}`,
+                    "Continuamos de izquierda a derecha"
+                ]
+            });
+            
+            expresionActual = nuevaExpresion;
+            regexMultDiv.lastIndex = 0;
+        }
+        
+        return pasos;
+    }
+
+    resolverSumasRestas(expresion) {
+        const pasos = [];
+        let expresionActual = expresion;
+        
+        // Buscar sumas y restas
+        const regexSumaResta = /(-?\d+(?:\.\d+)?)\s*([+\-])\s*(\d+(?:\.\d+)?)/g;
+        let match;
+        
+        while ((match = regexSumaResta.exec(expresionActual)) !== null) {
+            const izquierda = parseFloat(match[1]);
+            const operador = match[2];
+            const derecha = parseFloat(match[3]);
+            let resultado;
+            
+            if (operador === '+') {
+                resultado = izquierda + derecha;
+            } else {
+                resultado = izquierda - derecha;
+            }
+            
+            resultado = this.formatearNumero(resultado);
+            
+            const nuevaExpresion = expresionActual.replace(match[0], resultado.toString());
+            pasos.push({
+                expresion: nuevaExpresion,
+                explicacion: "Resolvemos sumas y restas (última prioridad en PAPOMUDAS)",
+                operacion: `${match[0]} = ${resultado}`,
+                subpasos: [
+                    `Realizamos la operación: ${izquierda} ${operador} ${derecha} = ${resultado}`,
+                    "Continuamos de izquierda a derecha"
+                ]
+            });
+            
+            expresionActual = nuevaExpresion;
+            regexSumaResta.lastIndex = 0;
+        }
+        
+        return pasos;
+    }
+
+    // ===== FUNCIONES AUXILIARES =====
+    destacarElementos(expresion) {
+        const elementos = ['(', ')', '+', '-', '×', '÷', '^', '²', '³', '√', 'sin', 'cos', 'tan', 'log', 'π', 'e'];
+        elementos.sort((a, b) => b.length - a.length);
+        
+        let resultado = expresion;
+        for (const elemento of elementos) {
+            const regex = new RegExp(this.escapeRegExp(elemento), 'g');
+            resultado = resultado.replace(regex, `<span class="elemento-destacado">${elemento}</span>`);
+        }
+        
+        return resultado;
+    }
+
+    destacarComponente(expresion, componente) {
+        const antes = expresion.substring(0, componente.posicion);
+        const destacado = `<span class="elemento-destacado">${componente.valor}</span>`;
+        const despues = expresion.substring(componente.posicion + componente.valor.length);
+        return antes + destacado + despues;
+    }
+
+    prepararExpresionParaEvaluacion(expresion) {
+        return expresion
+            .replace(/×/g, '*')
+            .replace(/÷/g, '/')
+            .replace(/²/g, '**2')
+            .replace(/³/g, '**3')
+            .replace(/\^/g, '**')
+            .replace(/√/g, 'Math.sqrt')
+            .replace(/π/g, Math.PI.toString())
+            .replace(/e/g, Math.E.toString())
+            .replace(/sin/g, 'Math.sin')
+            .replace(/cos/g, 'Math.cos')
+            .replace(/tan/g, 'Math.tan')
+            .replace(/log/g, 'Math.log10');
+    }
+
+    evaluarExpresionSegura(expresion) {
+        try {
+            // Validar expresión básica
+            if (!/^[0-9+\-*/(). Math]+$/.test(expresion.replace(/Math\.(sqrt|sin|cos|tan|log10)/g, ''))) {
+                throw new Error('Expresión contiene caracteres no permitidos');
+            }
+            
+            const resultado = new Function('return ' + expresion)();
+            return this.formatearNumero(resultado);
+        } catch (error) {
+            throw new Error('No se pudo evaluar la expresión: ' + error.message);
+        }
+    }
+
+    formatearNumero(numero) {
+        if (typeof numero !== 'number') return numero;
+        
+        // Redondear para evitar números como 0.30000000000000004
+        return Math.round(numero * 100000000) / 100000000;
+    }
+
+    escapeRegExp(string) {
+        return string.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
+    }
+
+    contarParentesis(expresion) {
+        const aperturas = (expresion.match(/\(/g) || []).length;
+        const cierres = (expresion.match(/\)/g) || []).length;
+        return { total: aperturas + cierres, balanceado: aperturas === cierres };
+    }
+
+    identificarOperadores(expresion) {
+        return (expresion.match(/\+|\-|\×|\÷/g) || []);
+    }
+
+    identificarFunciones(expresion) {
+        return (expresion.match(/sin|cos|tan|log/g) || []);
+    }
+
+    identificarConstantes(expresion) {
+        return (expresion.match(/π|e/g) || []);
+    }
+
+    identificarNumeros(expresion) {
+        return (expresion.match(/-?\d+\.?\d*/g) || []);
     }
 
     // ===== REFLEXIÓN FINAL =====
@@ -601,68 +1059,6 @@ class AnalizadorMatematico {
                 `).join('')}
             </div>
         `;
-    }
-
-    // ===== FUNCIONES AUXILIARES =====
-    destacarElementos(expresion, elementos = null) {
-        if (!elementos) {
-            elementos = ['(', ')', '+', '-', '×', '÷', '^', '²', '³', '√', 'sin', 'cos', 'tan', 'log'];
-        }
-        
-        // Ordenar por longitud para evitar problemas de superposición
-        elementos.sort((a, b) => b.length - a.length);
-        
-        let resultado = expresion;
-        for (let elemento of elementos) {
-            const regex = new RegExp(this.escapeRegExp(elemento), 'g');
-            resultado = resultado.replace(regex, `<span class="elemento-destacado">${elemento}</span>`);
-        }
-        
-        return resultado;
-    }
-
-    destacarComponente(expresion, componente) {
-        const antes = expresion.substring(0, componente.posicion);
-        const destacado = `<span class="elemento-destacado">${componente.valor}</span>`;
-        const despues = expresion.substring(componente.posicion + componente.valor.length);
-        return antes + destacado + despues;
-    }
-
-    escapeRegExp(string) {
-        return string.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
-    }
-
-    contarParentesis(expresion) {
-        const aperturas = (expresion.match(/\(/g) || []).length;
-        const cierres = (expresion.match(/\)/g) || []).length;
-        return { total: aperturas + cierres, balanceado: aperturas === cierres };
-    }
-
-    identificarOperadores(expresion) {
-        return (expresion.match(/\+|\-|\×|\÷/g) || []);
-    }
-
-    identificarFunciones(expresion) {
-        return (expresion.match(/sin|cos|tan|log/g) || []);
-    }
-
-    identificarNumeros(expresion) {
-        return (expresion.match(/\d+\.?\d*/g) || []);
-    }
-
-    evaluarExpresionSegura(expresion) {
-        try {
-            const expresionSegura = expresion
-                .replace(/×/g, '*')
-                .replace(/÷/g, '/')
-                .replace(/²/g, '**2')
-                .replace(/³/g, '**3')
-                .replace(/\^/g, '**');
-            
-            return new Function('return ' + expresionSegura)();
-        } catch (error) {
-            throw new Error('No se pudo evaluar la expresión');
-        }
     }
 
     // ===== NAVEGACIÓN =====
