@@ -1,27 +1,45 @@
-h1 {
-  color: #3f51b5;
-  font-weight: 700;
+@import url("variables.css");
+
+/* === PÁGINA DE ACTIVIDADES === */
+
+.actividad-card {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-#nivelSelect {
-  font-size: 1.1rem;
-  padding: 0.5rem 1rem;
-}
-
-.card {
-  border-radius: 1rem;
-  transition: 0.3s ease;
-}
-
-.card:hover {
+.actividad-card:hover {
   transform: translateY(-5px);
+  box-shadow: 0 8px 25px rgba(0,0,0,0.15) !important;
 }
 
-iframe {
-  border-radius: 0.5rem;
+.card-img-container .icono-actividad {
+  transition: transform 0.3s ease;
 }
 
-.ratio {
-  background-color: #f8f9fa;
-  border-radius: 0.5rem;
+.actividad-card:hover .icono-actividad {
+  transform: scale(1.1);
+}
+
+/* Modal personalizado */
+/* Estilos para el modal fullscreen */
+.modal-fullscreen .modal-content {
+  height: 100vh;
+}
+
+.modal-body {
+  flex: 1;
+}
+
+#iframe-container {
+  height: 100%;
+  width: 100%;
+}
+
+/* Asegurar que el iframe ocupe todo el espacio */
+#iframe-container iframe {
+  min-height: 80vh;
+}
+/* Badges de asignaturas */
+.badge {
+  font-size: 0.7em;
+  padding: 0.5em 1em;
 }

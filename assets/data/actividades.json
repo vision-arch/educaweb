@@ -1,26 +1,32 @@
 [
   {
-    "nivel": "prebasica",
+    "nivel": "1basico",
     "asignatura": "lenguaje",
     "titulo": "Aprendemos las Vocales",
     "descripcion": "Juego interactivo para reconocer y pronunciar las vocales.",
     "url": "https://wordwall.net/es/resource/11366189",
-    "icono": "https://cdn-icons-png.flaticon.com/512/2873/2873469.png"
+    "embedUrl": "https://wordwall.net/es/embed/1a556db06a9440e0aa84537f3e04806d?themeId=65&templateId=2&fontStackId=0",
+    "icono": "https://cdn-icons-png.flaticon.com/512/2873/2873469.png",
+    "miniatura": "https://images.unsplash.com/photo-1635070041078-e363dbe005cb?w=400&h=250&fit=crop"
   },
   {
-    "nivel": "basica",
+    "nivel": "1basico",
     "asignatura": "matematicas",
     "titulo": "Sumas y Restas Básicas",
     "descripcion": "Actividad divertida para practicar operaciones simples.",
     "url": "https://wordwall.net/es/resource/10435294",
-    "icono": "https://cdn-icons-png.flaticon.com/512/3135/3135715.png"
+    "embedUrl": "https://wordwall.net/es/embed/1a556db06a9440e0aa84537f3e04806d?themeId=65&templateId=2&fontStackId=0",
+    "icono": "https://cdn-icons-png.flaticon.com/512/3135/3135715.png",
+    "miniatura": "https://images.unsplash.com/photo-1635070041078-e363dbe005cb?w=400&h=250&fit=crop"
   },
   {
-    "nivel": "media",
-    "asignatura": "ciencias",
+    "nivel": "2basico",
+    "asignatura": "historia",
     "titulo": "El Sistema Solar",
     "descripcion": "Explora los planetas con este quiz espacial.",
     "url": "https://wordwall.net/es/resource/13654785",
-    "icono": "https://cdn-icons-png.flaticon.com/512/2942/2942809.png"
+    "embedUrl": "https://wordwall.net/es/embed/1a556db06a9440e0aa84537f3e04806d?themeId=65&templateId=2&fontStackId=0",
+    "icono": "https://cdn-icons-png.flaticon.com/512/2942/2942809.png",
+    "miniatura": "https://images.unsplash.com/photo-1635070041078-e363dbe005cb?w=400&h=250&fit=crop"
   }
 ]
