@@ -19,8 +19,7 @@
   transform: scale(1.1);
 }
 
-/* Modal personalizado */
-/* Estilos para el modal fullscreen */
+/* modal fullscreen */
 .modal-fullscreen .modal-content {
   height: 100vh;
 }
@@ -42,4 +41,29 @@
 .badge {
   font-size: 0.7em;
   padding: 0.5em 1em;
+}
+
+/* paginación */
+.pagination .page-link {
+    border-radius: 8px;
+    margin: 0 3px;
+    border: 1px solid #dee2e6;
+    color: var(--primary-color);
+    font-weight: 500;
+}
+
+.pagination .page-item.active .page-link {
+    background-color: var(--primary-color);
+    border-color: var(--primary-color);
+    color: white;
+}
+
+.pagination .page-link:hover {
+    background-color: #e9ecef;
+    border-color: #dee2e6;
+}
+
+.pagination .page-item.disabled .page-link {
+    color: #6c757d;
+    background-color: #f8f9fa;
 }

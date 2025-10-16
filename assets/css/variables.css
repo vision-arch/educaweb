@@ -1,5 +1,5 @@
 :root {
-  /* 🎨 PALETA DE COLORES */
+  /*  PALETA DE COLORES */
   --color-primario: #ff0080;   /* Rosado brillante - acento emocional */
   --color-secundario: #ffff00; /* Amarillo positivo - estímulo visual */
   --color-acento: #31aac1;     /* Calipso calmante - equilibrio */
@@ -9,12 +9,12 @@
   --color-footer: #023047;
   --color-sombra: rgba(0, 0, 0, 0.1);
 
-  /* 🪶 ESTILOS GENERALES */
+  /*  ESTILOS GENERALES */
   --transicion-base: all 0.3s ease;
   --sombra-base: 0 4px 12px var(--color-sombra);
   --radio: 1rem;
 
-  /* 🔠 TIPOGRAFÍAS */
+  /*  TIPOGRAFÍAS */
   --fuente-principal: "Poppins", sans-serif;
   --fuente-secundaria: "Nunito", sans-serif;
 }
