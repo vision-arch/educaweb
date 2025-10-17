@@ -212,12 +212,12 @@
   {
     "nivel": "2basico",
     "asignatura": "historia",
-    "titulo": "El Sistema Solar",
-    "descripcion": "Explora los planetas con este quiz espacial.",
-    "url": "https://wordwall.net/es/resource/13654785",
-    "embedUrl": "https://wordwall.net/es/embed/1a556db06a9440e0aa84537f3e04806d?themeId=65&templateId=2&fontStackId=0",
+    "titulo": "Conociendo nuestro país:",
+    "descripcion": "INGRESAR UNA DESCRIPCION.",
+    "url": "https://wordwall.net/es/resource/99587081",
+    "embedUrl": "https://wordwall.net/es/embed/aa324065c47144f1a978af45200d1437?themeId=65&templateId=30&fontStackId=0",
     "icono": "https://cdn-icons-png.flaticon.com/512/2942/2942809.png",
-    "miniatura": "https://images.unsplash.com/photo-1635070041078-e363dbe005cb?w=400&h=250&fit=crop"
+    "miniatura": "https://screens.cdn.wordwall.net/200/aa324065c47144f1a978af45200d1437_0"
   },
   {
     "nivel": "2basico",
@@ -452,12 +452,12 @@
   {
     "nivel": "4basico",
     "asignatura": "historia",
-    "titulo": "El Sistema Solar",
-    "descripcion": "Explora los planetas con este quiz espacial.",
-    "url": "https://wordwall.net/es/resource/13654785",
-    "embedUrl": "https://wordwall.net/es/embed/1a556db06a9440e0aa84537f3e04806d?themeId=65&templateId=2&fontStackId=0",
+    "titulo": "Juntos construimos el respeto",
+    "descripcion": "INGRESAR UNA DESCRIPCION.",
+    "url": "https://wordwall.net/es/resource/99589610",
+    "embedUrl": "https://wordwall.net/es/embed/108fa182dd1944ec84a3cb2727abaff9?themeId=65&templateId=30&fontStackId=0",
     "icono": "https://cdn-icons-png.flaticon.com/512/2942/2942809.png",
-    "miniatura": "https://images.unsplash.com/photo-1635070041078-e363dbe005cb?w=400&h=250&fit=crop"
+    "miniatura": "https://screens.cdn.wordwall.net/200/108fa182dd1944ec84a3cb2727abaff9_0"
   },
   {
     "nivel": "4basico",
@@ -512,32 +512,32 @@
   {
     "nivel": "5basico",
     "asignatura": "matematicas",
-    "titulo": "Sumas y Restas Básicas",
-    "descripcion": "Actividad divertida para practicar operaciones simples.",
-    "url": "https://wordwall.net/es/resource/10435294",
-    "embedUrl": "https://wordwall.net/es/embed/1a556db06a9440e0aa84537f3e04806d?themeId=65&templateId=2&fontStackId=0",
+    "titulo": "Números naturales y su valor posicional",
+    "descripcion": "Actividad diseñada para reforzar aprendizaje matematico, a través de preguntas adaptadas, los estudiantes podrán explorar conceptos clave sobre numeración.",
+    "url": "https://wordwall.net/es/resource/99897859",
+    "embedUrl": "https://wordwall.net/es/embed/ae49abfd29554dc48a997416769f1e99?themeId=65&templateId=5&fontStackId=0",
     "icono": "https://cdn-icons-png.flaticon.com/512/3135/3135715.png",
-    "miniatura": "https://images.unsplash.com/photo-1635070041078-e363dbe005cb?w=400&h=250&fit=crop"
+    "miniatura": "https://screens.cdn.wordwall.net/200/ae49abfd29554dc48a997416769f1e99_65"
   },
   {
     "nivel": "5basico",
     "asignatura": "matematicas",
-    "titulo": "Sumas y Restas Básicas",
-    "descripcion": "Actividad divertida para practicar operaciones simples.",
-    "url": "https://wordwall.net/es/resource/10435294",
-    "embedUrl": "https://wordwall.net/es/embed/1a556db06a9440e0aa84537f3e04806d?themeId=65&templateId=2&fontStackId=0",
+    "titulo": "Multiplicación para todos: comprensión y estrategia",
+    "descripcion": "Actividad orientada a la comprensión del concepto de multiplicación y estrategias de resolución.",
+    "url": "https://wordwall.net/es/resource/99955268",
+    "embedUrl": "https://wordwall.net/es/embed/43d046f46d474161abd5b26e37889f2f?themeId=59&templateId=69&fontStackId=0",
     "icono": "https://cdn-icons-png.flaticon.com/512/3135/3135715.png",
-    "miniatura": "https://images.unsplash.com/photo-1635070041078-e363dbe005cb?w=400&h=250&fit=crop"
+    "miniatura": "https://screens.cdn.wordwall.net/200/43d046f46d474161abd5b26e37889f2f_59"
   },
   {
     "nivel": "5basico",
     "asignatura": "matematicas",
-    "titulo": "Sumas y Restas Básicas",
-    "descripcion": "Actividad divertida para practicar operaciones simples.",
-    "url": "https://wordwall.net/es/resource/10435294",
-    "embedUrl": "https://wordwall.net/es/embed/1a556db06a9440e0aa84537f3e04806d?themeId=65&templateId=2&fontStackId=0",
+    "titulo": "Matemática en la vida cotidiana",
+    "descripcion": "Esta actividad permite aplicar conceptos matemáticos báscios en situaciones reales relacionadas con el dinero.",
+    "url": "https://wordwall.net/es/resource/99960800",
+    "embedUrl": "https://wordwall.net/es/embed/3d00062b75b642e0a28082f545cf2dfd?themeId=66&templateId=49&fontStackId=0",
     "icono": "https://cdn-icons-png.flaticon.com/512/3135/3135715.png",
-    "miniatura": "https://images.unsplash.com/photo-1635070041078-e363dbe005cb?w=400&h=250&fit=crop"
+    "miniatura": "https://screens.cdn.wordwall.net/200/3d00062b75b642e0a28082f545cf2dfd_66"
   },
   {
     "nivel": "5basico",
@@ -662,32 +662,32 @@
   {
     "nivel": "6basico",
     "asignatura": "ciencias",
-    "titulo": "El Sistema Solar",
-    "descripcion": "Explora los planetas con este quiz espacial.",
-    "url": "https://wordwall.net/es/resource/13654785",
-    "embedUrl": "https://wordwall.net/es/embed/1a556db06a9440e0aa84537f3e04806d?themeId=65&templateId=2&fontStackId=0",
+    "titulo": "Descubriendo la Tierra y el Universo",
+    "descripcion": "Observar, asociar y ordenar procesos naturales.",
+    "url": "https://wordwall.net/es/resource/99893529/6to-básico-descubriendo-la-tierra-y-el-universo-ciencias?ref=embed-image",
+    "embedUrl": "https://wordwall.net/es/embed/beac21fccbcd4f6e892402458fdea952?themeId=65&templateId=3&fontStackId=0",
     "icono": "https://cdn-icons-png.flaticon.com/512/2942/2942809.png",
-    "miniatura": "https://images.unsplash.com/photo-1635070041078-e363dbe005cb?w=400&h=250&fit=crop"
+    "miniatura": "https://screens.cdn.wordwall.net/200/beac21fccbcd4f6e892402458fdea952_65"
   },
   {
     "nivel": "6basico",
     "asignatura": "ciencias",
-    "titulo": "El Sistema Solar",
-    "descripcion": "Explora los planetas con este quiz espacial.",
-    "url": "https://wordwall.net/es/resource/13654785",
-    "embedUrl": "https://wordwall.net/es/embed/1a556db06a9440e0aa84537f3e04806d?themeId=65&templateId=2&fontStackId=0",
+    "titulo": "Energía en Acción",
+    "descripcion": "Clasificar, responder y completar las frases relacionadas con el uso de energía, el calor y el cuidado de la salud frente a sustancias dañinas.",
+    "url": "https://wordwall.net/es/resource/99892875",
+    "embedUrl": "https://wordwall.net/es/embed/09accb69889f47618d9e5654e4bd1192?themeId=65&templateId=36&fontStackId=0",
     "icono": "https://cdn-icons-png.flaticon.com/512/2942/2942809.png",
-    "miniatura": "https://images.unsplash.com/photo-1635070041078-e363dbe005cb?w=400&h=250&fit=crop"
+    "miniatura": "https://screens.cdn.wordwall.net/200/09accb69889f47618d9e5654e4bd1192_65"
   },
   {
     "nivel": "6basico",
     "asignatura": "ciencias",
-    "titulo": "El Sistema Solar",
-    "descripcion": "Explora los planetas con este quiz espacial.",
-    "url": "https://wordwall.net/es/resource/13654785",
-    "embedUrl": "https://wordwall.net/es/embed/1a556db06a9440e0aa84537f3e04806d?themeId=65&templateId=2&fontStackId=0",
+    "titulo": "Exploradores del cuerpo y la naturaleza",
+    "descripcion": "Relacionar conceptos de la vida y el cuerpo humano con su descripción o función.",
+    "url": "https://wordwall.net/es/resource/99588790",
+    "embedUrl": "https://wordwall.net/es/embed/7f65a6e2bdf24c1c9f0c51a40f30753c?themeId=65&templateId=5&fontStackId=0",
     "icono": "https://cdn-icons-png.flaticon.com/512/2942/2942809.png",
-    "miniatura": "https://images.unsplash.com/photo-1635070041078-e363dbe005cb?w=400&h=250&fit=crop"
+    "miniatura": "https://screens.cdn.wordwall.net/200/7f65a6e2bdf24c1c9f0c51a40f30753c_65"
   },
   {
     "nivel": "6basico",

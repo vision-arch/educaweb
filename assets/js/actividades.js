@@ -74,7 +74,7 @@ function mostrarActividades() {
             <img src="${a.miniatura}" 
                  class="card-img-top" 
                  alt="${a.titulo}"
-                 style="height: 200px; object-fit: cover;">
+                 style="height: 200px; object-fit: contain;">
             <div class="card-img-overlay d-flex justify-content-center align-items-center">
               <div class="icono-actividad bg-white rounded-circle p-3 shadow">
                 <img src="${a.icono}" 
