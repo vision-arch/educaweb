@@ -39,17 +39,33 @@
     <div id="header"></div>
 
     <!-- Header Principal -->
-      <div class="row bg-primary text-white py-4">
-        <div class="col text-center">
-          <h1 class="display-5 fw-bold mb-3">Canva Matemático</h1>
-          <p class="fs-5 mb-0">
-            Análisis paso a paso con enfoque psicopedagógico,
-          </p>
-        </div>
+    <div class="row bg-primary text-white py-4">
+      <div class="col text-center">
+        <h1 class="display-5 fw-bold mb-3">Canva Matemático</h1>
+        <p class="fs-5 mb-0">
+          Análisis paso a paso con enfoque psicopedagógico,
+        </p>
       </div>
-    <main class="container">
+    </div>
+    <div class="container">
+      <h1><strong>!IMPORTANTE¡</strong></h1>
+      <p>
+        Esta es una versión <strong>BETA</strong> de la calculadora
+        psicopedagógica que pretendo crear. Debe ser utilizada con precaución;
+        algunas funciones siguen en estado de testeo, por lo que pueden no
+        funcionar como deben.
+        <strong>Verifique siempre los resultados.</strong> Agradezco su
+        comprensión.
+      </p>
+      <br />
+      <p>
+        Estoy trabajando para mejorarla; úsela como una guía de resolución. Que
+        tengan un buen aprendizaje. :)
+      </p>
+      <br>
       
-
+    </div>
+    <main class="container">
       <!-- Contenido Principal -->
       <div class="container row min-vh-100">
         <!-- Panel Izquierdo: Calculadora Científica -->
@@ -258,7 +274,8 @@
               <button
                 class="btn btn-success w-100 py-3 fw-bold fs-5"
                 id="btn-analizar"
-              > ANALIZAR EXPRESIÓN
+              >
+                ANALIZAR EXPRESIÓN
               </button>
             </div>
 
@@ -292,7 +309,6 @@
                 </button>
               </div>
             </div>
-            
           </div>
         </div>
 
@@ -310,37 +326,11 @@
               </div>
             </div>
 
-            <!-- Navegación de Pasos -->
-            <div class="card mb-4">
-              <div class="card-body py-3">
-                <div class="d-flex justify-content-between align-items-center">
-                  <h5 class="mb-0 fw-bold">Progreso del Análisis</h5>
-                  <div class="d-flex gap-2">
-                    <button
-                      class="btn btn-outline-primary btn-sm"
-                      id="btn-prev-paso"
-                      disabled
-                    >
-                      ← Anterior
-                    </button>
-                    <button
-                      class="btn btn-outline-primary btn-sm"
-                      id="btn-next-paso"
-                      disabled
-                    >
-                      Siguiente →
-                    </button>
-                  </div>
-                </div>
-              </div>
-            </div>
-
             <!-- Contenedor Principal de Análisis -->
             <div id="contenedor-analisis">
               <!-- Vista Inicial -->
               <div class="text-center text-muted py-5" id="vista-inicial">
-                <div class="mb-4">
-                </div>
+                <div class="mb-4"></div>
                 <h4 class="mb-3">Comienza tu análisis matemático</h4>
                 <p class="fs-5">
                   Escribe una expresión matemática en la calculadora y haz clic
@@ -368,17 +358,23 @@
       </div>
     </main>
 
+    <div class="container mensaje">
+      <h3>Este proyecto es un regalo a mis profesoras y compañeras de carrera de psicopedagogía; espero les sea de utilidad.
+        <br>
+        <i>Iré mejorando el análisis y los cálculos con el tiempo. :)</i>
+      </h3>
+    </div>
+
     <!-- Footer -->
     <div id="footer"></div>
 
     <!-- Scripts -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
-    <!-- En la sección de scripts, reemplaza esto: -->
+    <!-- analizador -->
     <script src="assets/js/analizador-matematico/modulo-utilidades.js"></script>
-    <script src="assets/js/analizador-matematico/modulo-copisi.js"></script>
     <script src="assets/js/analizador-matematico/modulo-explicaciones.js"></script>
-    <script src="assets/js/analizador-matematico/modulo-papomudas.js"></script>
     <script src="assets/js/analizador-matematico/modulo-visualizacion.js"></script>
+    <script src="assets/js/analizador-matematico/modulo-analizador.js"></script>
     <script src="assets/js/analizador-matematico/analisis-principal.js"></script>
     <script src="assets/js/analizador-matematico/calculadora.js"></script>
     <!-- inicializador -->
