@@ -32,62 +32,62 @@
   {
     "nivel": "1basico",
     "asignatura": "matematicas",
-    "titulo": "Sumas y Restas Básicas",
-    "descripcion": "Actividad divertida para practicar operaciones simples.",
-    "url": "https://wordwall.net/es/resource/10435294",
-    "embedUrl": "https://wordwall.net/es/embed/1a556db06a9440e0aa84537f3e04806d?themeId=65&templateId=2&fontStackId=0",
+    "titulo": "Sumas, descubriendo las verdaderas y las falsas",
+    "descripcion": "Los estudiantes observan sumas y deciden cuál resultado es V o F. Esto permite reforzar el cálculo mental, la atención y la comprensión del valor numérico.",
+    "url": "https://wordwall.net/resource/100069070",
+    "embedUrl": "https://wordwall.net/es/embed/db70775b5ed24f9b8f2ba712fc428922?themeId=65&templateId=35&fontStackId=0",
     "icono": "https://cdn-icons-png.flaticon.com/512/3135/3135715.png",
-    "miniatura": "https://images.unsplash.com/photo-1635070041078-e363dbe005cb?w=400&h=250&fit=crop"
+    "miniatura": "https://screens.cdn.wordwall.net/200/db70775b5ed24f9b8f2ba712fc428922_65"
   },
   {
     "nivel": "1basico",
     "asignatura": "matematicas",
-    "titulo": "Sumas y Restas Básicas",
-    "descripcion": "Actividad divertida para practicar operaciones simples.",
-    "url": "https://wordwall.net/es/resource/10435294",
-    "embedUrl": "https://wordwall.net/es/embed/1a556db06a9440e0aa84537f3e04806d?themeId=65&templateId=2&fontStackId=0",
+    "titulo": "Jugando con las Restas",
+    "descripcion": "Actividad para resolver restas simples con apoyo visual. Favorece la comprensión de valor numérico, el razonamiento lógico y el desarrollo del cálculo básico.",
+    "url": "https://wordwall.net/resource/100069717",
+    "embedUrl": "https://wordwall.net/es/embed/6acb01b28ee74c3e88383180885fff82?themeId=22&templateId=71&fontStackId=0",
     "icono": "https://cdn-icons-png.flaticon.com/512/3135/3135715.png",
-    "miniatura": "https://images.unsplash.com/photo-1635070041078-e363dbe005cb?w=400&h=250&fit=crop"
+    "miniatura": "https://screens.cdn.wordwall.net/200/6acb01b28ee74c3e88383180885fff82_0"
   },
   {
     "nivel": "1basico",
     "asignatura": "matematicas",
-    "titulo": "Sumas y Restas Básicas",
-    "descripcion": "Actividad divertida para practicar operaciones simples.",
-    "url": "https://wordwall.net/es/resource/10435294",
-    "embedUrl": "https://wordwall.net/es/embed/1a556db06a9440e0aa84537f3e04806d?themeId=65&templateId=2&fontStackId=0",
+    "titulo": "Quiz de sumas y restas",
+    "descripcion": "Los estudiantes deben resolver sumas y restas simples con apoyo visual. Potencia el cálculo mental, la atención y la comprensión de operaciones básicas.",
+    "url": "https://wordwall.net/resource/100070519",
+    "embedUrl": "https://wordwall.net/es/embed/b861981399fb4148ba46d11d8703608f?themeId=65&templateId=5&fontStackId=0",
     "icono": "https://cdn-icons-png.flaticon.com/512/3135/3135715.png",
-    "miniatura": "https://images.unsplash.com/photo-1635070041078-e363dbe005cb?w=400&h=250&fit=crop"
+    "miniatura": "https://screens.cdn.wordwall.net/200/b861981399fb4148ba46d11d8703608f_65"
   },
   {
     "nivel": "1basico",
     "asignatura": "ciencias",
-    "titulo": "El Sistema Solar",
-    "descripcion": "Explora los planetas con este quiz espacial.",
-    "url": "https://wordwall.net/es/resource/13654785",
-    "embedUrl": "https://wordwall.net/es/embed/1a556db06a9440e0aa84537f3e04806d?themeId=65&templateId=2&fontStackId=0",
+    "titulo": "Adivinemos qué hay detrás",
+    "descripcion": "INGRESAR UNA DESCRIPCION.",
+    "url": "https://wordwall.net/es/resource/100046885",
+    "embedUrl": "https://wordwall.net/es/embed/8dd48f8d985e487fa4b7a37d2342741b?themeId=21&templateId=68&fontStackId=0",
     "icono": "https://cdn-icons-png.flaticon.com/512/2942/2942809.png",
-    "miniatura": "https://images.unsplash.com/photo-1635070041078-e363dbe005cb?w=400&h=250&fit=crop"
+    "miniatura": "https://screens.cdn.wordwall.net/200/8dd48f8d985e487fa4b7a37d2342741b_0"
   },
   {
     "nivel": "1basico",
     "asignatura": "ciencias",
-    "titulo": "El Sistema Solar",
-    "descripcion": "Explora los planetas con este quiz espacial.",
-    "url": "https://wordwall.net/es/resource/13654785",
-    "embedUrl": "https://wordwall.net/es/embed/1a556db06a9440e0aa84537f3e04806d?themeId=65&templateId=2&fontStackId=0",
+    "titulo": "Cajas misteriosas ",
+    "descripcion": "Responde las preguntas que ayuden a cuidar las plantas y usar correctamente los sentidos.",
+    "url": "https://wordwall.net/es/resource/100046215",
+    "embedUrl": "https://wordwall.net/es/embed/4b84ded95128441b89eeb442289396f8?themeId=52&templateId=30&fontStackId=0",
     "icono": "https://cdn-icons-png.flaticon.com/512/2942/2942809.png",
-    "miniatura": "https://images.unsplash.com/photo-1635070041078-e363dbe005cb?w=400&h=250&fit=crop"
+    "miniatura": "https://screens.cdn.wordwall.net/200/4b84ded95128441b89eeb442289396f8_52"
   },
   {
     "nivel": "1basico",
     "asignatura": "ciencias",
-    "titulo": "El Sistema Solar",
-    "descripcion": "Explora los planetas con este quiz espacial.",
-    "url": "https://wordwall.net/es/resource/13654785",
-    "embedUrl": "https://wordwall.net/es/embed/1a556db06a9440e0aa84537f3e04806d?themeId=65&templateId=2&fontStackId=0",
+    "titulo": "¡Aplasta lo vivo!",
+    "descripcion": "Aplasta solo los seres vivos o partes de plantas, ¡cuidado con los objetos que no son!",
+    "url": "https://wordwall.net/es/resource/100045494",
+    "embedUrl": "https://wordwall.net/es/embed/ed91f1c54c6d46099606294b2dd08af6?themeId=22&templateId=45&fontStackId=0",
     "icono": "https://cdn-icons-png.flaticon.com/512/2942/2942809.png",
-    "miniatura": "https://images.unsplash.com/photo-1635070041078-e363dbe005cb?w=400&h=250&fit=crop"
+    "miniatura": "https://screens.cdn.wordwall.net/200/ed91f1c54c6d46099606294b2dd08af6_0"
   },
   {
     "nivel": "1basico",
@@ -152,62 +152,62 @@
   {
     "nivel": "2basico",
     "asignatura": "matematicas",
-    "titulo": "Sumas y Restas Básicas",
-    "descripcion": "Actividad divertida para practicar operaciones simples.",
-    "url": "https://wordwall.net/es/resource/10435294",
-    "embedUrl": "https://wordwall.net/es/embed/1a556db06a9440e0aa84537f3e04806d?themeId=65&templateId=2&fontStackId=0",
+    "titulo": "¿Qué hora es?",
+    "descripcion": "INGRESAR UNA DESCRIPCION.",
+    "url": "https://wordwall.net/resource/100150648",
+    "embedUrl": "https://wordwall.net/es/embed/f7ebc672aa7f46b08db70a9b91b77fe4?themeId=65&templateId=30&fontStackId=0",
     "icono": "https://cdn-icons-png.flaticon.com/512/3135/3135715.png",
-    "miniatura": "https://images.unsplash.com/photo-1635070041078-e363dbe005cb?w=400&h=250&fit=crop"
+    "miniatura": "https://screens.cdn.wordwall.net/200/f7ebc672aa7f46b08db70a9b91b77fe4_0"
   },
   {
     "nivel": "2basico",
     "asignatura": "matematicas",
-    "titulo": "Sumas y Restas Básicas",
-    "descripcion": "Actividad divertida para practicar operaciones simples.",
-    "url": "https://wordwall.net/es/resource/10435294",
-    "embedUrl": "https://wordwall.net/es/embed/1a556db06a9440e0aa84537f3e04806d?themeId=65&templateId=2&fontStackId=0",
+    "titulo": "Figuras 2D y 3D",
+    "descripcion": "INGRESAR UNA DESCRIPCION.",
+    "url": "https://wordwall.net/resource/99065673",
+    "embedUrl": "https://wordwall.net/es/embed/e4c965f4d6144e7b824938a9cd5b720e?themeId=48&templateId=81&fontStackId=0",
     "icono": "https://cdn-icons-png.flaticon.com/512/3135/3135715.png",
-    "miniatura": "https://images.unsplash.com/photo-1635070041078-e363dbe005cb?w=400&h=250&fit=crop"
+    "miniatura": "https://screens.cdn.wordwall.net/200/e4c965f4d6144e7b824938a9cd5b720e_48"
   },
   {
     "nivel": "2basico",
     "asignatura": "matematicas",
-    "titulo": "Sumas y Restas Básicas",
-    "descripcion": "Actividad divertida para practicar operaciones simples.",
-    "url": "https://wordwall.net/es/resource/10435294",
-    "embedUrl": "https://wordwall.net/es/embed/1a556db06a9440e0aa84537f3e04806d?themeId=65&templateId=2&fontStackId=0",
+    "titulo": "Mayor, Menor o Igual",
+    "descripcion": "INGRESAR UNA DESCRIPCION.",
+    "url": "https://wordwall.net/resource/100150772",
+    "embedUrl": "https://wordwall.net/es/embed/319157de2cdf4950a328496507c98064?themeId=65&templateId=5&fontStackId=0",
     "icono": "https://cdn-icons-png.flaticon.com/512/3135/3135715.png",
-    "miniatura": "https://images.unsplash.com/photo-1635070041078-e363dbe005cb?w=400&h=250&fit=crop"
+    "miniatura": "https://screens.cdn.wordwall.net/200/319157de2cdf4950a328496507c98064_65"
   },
   {
     "nivel": "2basico",
     "asignatura": "ciencias",
-    "titulo": "El Sistema Solar",
-    "descripcion": "Explora los planetas con este quiz espacial.",
-    "url": "https://wordwall.net/es/resource/13654785",
-    "embedUrl": "https://wordwall.net/es/embed/1a556db06a9440e0aa84537f3e04806d?themeId=65&templateId=2&fontStackId=0",
+    "titulo": "Cuerpo sano, Vida feliz",
+    "descripcion": "INGRESAR UNA DESCRIPCION.",
+    "url": "https://wordwall.net/es/resource/100010203",
+    "embedUrl": "https://wordwall.net/es/embed/c1408f1cbb7e4b6dacbf228a99a21d2a?themeId=21&templateId=8&fontStackId=0",
     "icono": "https://cdn-icons-png.flaticon.com/512/2942/2942809.png",
-    "miniatura": "https://images.unsplash.com/photo-1635070041078-e363dbe005cb?w=400&h=250&fit=crop"
+    "miniatura": "https://screens.cdn.wordwall.net/200/c1408f1cbb7e4b6dacbf228a99a21d2a_21"
   },
   {
     "nivel": "2basico",
     "asignatura": "ciencias",
-    "titulo": "El Sistema Solar",
-    "descripcion": "Explora los planetas con este quiz espacial.",
-    "url": "https://wordwall.net/es/resource/13654785",
-    "embedUrl": "https://wordwall.net/es/embed/1a556db06a9440e0aa84537f3e04806d?themeId=65&templateId=2&fontStackId=0",
+    "titulo": "Exploradores del agua y del clima",
+    "descripcion": "INGRESAR UNA DESCRIPCION.",
+    "url": "https://wordwall.net/es/resource/100010423",
+    "embedUrl": "https://wordwall.net/es/embed/88a6069423894b0cb1efb80094df234c?themeId=55&templateId=81&fontStackId=12",
     "icono": "https://cdn-icons-png.flaticon.com/512/2942/2942809.png",
-    "miniatura": "https://images.unsplash.com/photo-1635070041078-e363dbe005cb?w=400&h=250&fit=crop"
+    "miniatura": "https://screens.cdn.wordwall.net/200/88a6069423894b0cb1efb80094df234c_55"
   },
   {
     "nivel": "2basico",
     "asignatura": "ciencias",
-    "titulo": "El Sistema Solar",
-    "descripcion": "Explora los planetas con este quiz espacial.",
-    "url": "https://wordwall.net/es/resource/13654785",
-    "embedUrl": "https://wordwall.net/es/embed/1a556db06a9440e0aa84537f3e04806d?themeId=65&templateId=2&fontStackId=0",
+    "titulo": "¿Quién soy?",
+    "descripcion": "INGRESAR UNA DESCRIPCION.",
+    "url": "https://wordwall.net/es/resource/100010035",
+    "embedUrl": "https://wordwall.net/es/embed/daaacfa25cd6459ea987d9af7b70199e?themeId=53&templateId=3&fontStackId=0",
     "icono": "https://cdn-icons-png.flaticon.com/512/2942/2942809.png",
-    "miniatura": "https://images.unsplash.com/photo-1635070041078-e363dbe005cb?w=400&h=250&fit=crop"
+    "miniatura": "https://screens.cdn.wordwall.net/200/daaacfa25cd6459ea987d9af7b70199e_53"
   },
   {
     "nivel": "2basico",
@@ -272,12 +272,22 @@
   {
     "nivel": "3basico",
     "asignatura": "matematicas",
-    "titulo": "Sumas y Restas Básicas",
-    "descripcion": "Actividad divertida para practicar operaciones simples.",
-    "url": "https://wordwall.net/es/resource/10435294",
-    "embedUrl": "https://wordwall.net/es/embed/1a556db06a9440e0aa84537f3e04806d?themeId=65&templateId=2&fontStackId=0",
+    "titulo": "Adivina la palabra matemática",
+    "descripcion": "Escucha o lee la pista y adivina la palabra matemática. Cada letra correcta te acerca a descubrir la palabra.",
+    "url": "https://wordwall.net/resource/100153941",
+    "embedUrl": "ttps://wordwall.net/es/embed/6aad86fcf1b546cc9444e5598dae4744?themeId=66&templateId=73&fontStackId=2",
     "icono": "https://cdn-icons-png.flaticon.com/512/3135/3135715.png",
-    "miniatura": "https://images.unsplash.com/photo-1635070041078-e363dbe005cb?w=400&h=250&fit=crop"
+    "miniatura": "https://screens.cdn.wordwall.net/200/6aad86fcf1b546cc9444e5598dae4744_66"
+  },
+  {
+    "nivel": "3basico",
+    "asignatura": "matematicas",
+    "titulo": "Descubre el número",
+    "descripcion": "Mira el número en la tarjeta y di cómo se escribe en palabras. Luego gira la tarjeta para ver si acertaste.",
+    "url": "https://wordwall.net/resource/100156153",
+    "embedUrl": "https://wordwall.net/es/embed/49a61b411d994521ada9f2a7f53cb529?themeId=65&templateId=76&fontStackId=0",
+    "icono": "https://cdn-icons-png.flaticon.com/512/3135/3135715.png",
+    "miniatura": "https://screens.cdn.wordwall.net/200/49a61b411d994521ada9f2a7f53cb529_65"
   },
   {
     "nivel": "3basico",
@@ -291,43 +301,33 @@
   },
   {
     "nivel": "3basico",
-    "asignatura": "matematicas",
-    "titulo": "Sumas y Restas Básicas",
-    "descripcion": "Actividad divertida para practicar operaciones simples.",
-    "url": "https://wordwall.net/es/resource/10435294",
-    "embedUrl": "https://wordwall.net/es/embed/1a556db06a9440e0aa84537f3e04806d?themeId=65&templateId=2&fontStackId=0",
-    "icono": "https://cdn-icons-png.flaticon.com/512/3135/3135715.png",
-    "miniatura": "https://images.unsplash.com/photo-1635070041078-e363dbe005cb?w=400&h=250&fit=crop"
+    "asignatura": "ciencias",
+    "titulo": "Adivina el alimento",
+    "descripcion": "INGRESAR UNA DESCRIPCION.",
+    "url": "https://wordwall.net/es/resource/100043972",
+    "embedUrl": "https://wordwall.net/es/embed/3e04dc54476d4ea387431da6b3f814e7?themeId=66&templateId=73&fontStackId=0",
+    "icono": "https://cdn-icons-png.flaticon.com/512/2942/2942809.png",
+    "miniatura": "https://screens.cdn.wordwall.net/200/3e04dc54476d4ea387431da6b3f814e7_66"
   },
   {
     "nivel": "3basico",
     "asignatura": "ciencias",
-    "titulo": "El Sistema Solar",
-    "descripcion": "Explora los planetas con este quiz espacial.",
-    "url": "https://wordwall.net/es/resource/13654785",
-    "embedUrl": "https://wordwall.net/es/embed/1a556db06a9440e0aa84537f3e04806d?themeId=65&templateId=2&fontStackId=0",
+    "titulo": "Las plantas y su vida",
+    "descripcion": "INGRESAR UNA DESCRIPCION.",
+    "url": "https://wordwall.net/es/resource/100009561",
+    "embedUrl": "https://wordwall.net/es/embed/29936ce0ec4b4aa4951b50ccdf894478?themeId=46&templateId=48&fontStackId=0",
     "icono": "https://cdn-icons-png.flaticon.com/512/2942/2942809.png",
-    "miniatura": "https://images.unsplash.com/photo-1635070041078-e363dbe005cb?w=400&h=250&fit=crop"
+    "miniatura": "https://screens.cdn.wordwall.net/200/29936ce0ec4b4aa4951b50ccdf894478_0"
   },
   {
     "nivel": "3basico",
     "asignatura": "ciencias",
-    "titulo": "El Sistema Solar",
-    "descripcion": "Explora los planetas con este quiz espacial.",
-    "url": "https://wordwall.net/es/resource/13654785",
-    "embedUrl": "https://wordwall.net/es/embed/1a556db06a9440e0aa84537f3e04806d?themeId=65&templateId=2&fontStackId=0",
+    "titulo": "¿Qué órgano es?",
+    "descripcion": "INGRESAR UNA DESCRIPCION.",
+    "url": "https://wordwall.net/es/resource/100044975",
+    "embedUrl": "https://wordwall.net/es/embed/35e8c49ee9f14702ab3fd84db01b0d41?themeId=48&templateId=46&fontStackId=12",
     "icono": "https://cdn-icons-png.flaticon.com/512/2942/2942809.png",
-    "miniatura": "https://images.unsplash.com/photo-1635070041078-e363dbe005cb?w=400&h=250&fit=crop"
-  },
-  {
-    "nivel": "3basico",
-    "asignatura": "ciencias",
-    "titulo": "El Sistema Solar",
-    "descripcion": "Explora los planetas con este quiz espacial.",
-    "url": "https://wordwall.net/es/resource/13654785",
-    "embedUrl": "https://wordwall.net/es/embed/1a556db06a9440e0aa84537f3e04806d?themeId=65&templateId=2&fontStackId=0",
-    "icono": "https://cdn-icons-png.flaticon.com/512/2942/2942809.png",
-    "miniatura": "https://images.unsplash.com/photo-1635070041078-e363dbe005cb?w=400&h=250&fit=crop"
+    "miniatura": "https://screens.cdn.wordwall.net/200/35e8c49ee9f14702ab3fd84db01b0d41_48"
   },
   {
     "nivel": "3basico",
@@ -392,62 +392,62 @@
   {
     "nivel": "4basico",
     "asignatura": "matematicas",
-    "titulo": "Sumas y Restas Básicas",
-    "descripcion": "Actividad divertida para practicar operaciones simples.",
-    "url": "https://wordwall.net/es/resource/10435294",
-    "embedUrl": "https://wordwall.net/es/embed/1a556db06a9440e0aa84537f3e04806d?themeId=65&templateId=2&fontStackId=0",
+    "titulo": "Relaciona formas",
+    "descripcion": "INGRESAR UNA DESCRIPCION.",
+    "url": "https://wordwall.net/resource/100069037",
+    "embedUrl": "https://wordwall.net/es/embed/97542db76aa2450ebf28019775951dba?themeId=65&templateId=88&fontStackId=0",
     "icono": "https://cdn-icons-png.flaticon.com/512/3135/3135715.png",
-    "miniatura": "https://images.unsplash.com/photo-1635070041078-e363dbe005cb?w=400&h=250&fit=crop"
+    "miniatura": "https://screens.cdn.wordwall.net/200/97542db76aa2450ebf28019775951dba_65"
   },
   {
     "nivel": "4basico",
     "asignatura": "matematicas",
-    "titulo": "Sumas y Restas Básicas",
-    "descripcion": "Actividad divertida para practicar operaciones simples.",
-    "url": "https://wordwall.net/es/resource/10435294",
-    "embedUrl": "https://wordwall.net/es/embed/1a556db06a9440e0aa84537f3e04806d?themeId=65&templateId=2&fontStackId=0",
+    "titulo": "Clasifica figuras",
+    "descripcion": "INGRESAR UNA DESCRIPCION.",
+    "url": "https://wordwall.net/resource/100066958",
+    "embedUrl": "https://wordwall.net/es/embed/15cb416fb9cd4671a2823b95426ed35c?themeId=44&templateId=81&fontStackId=0",
     "icono": "https://cdn-icons-png.flaticon.com/512/3135/3135715.png",
-    "miniatura": "https://images.unsplash.com/photo-1635070041078-e363dbe005cb?w=400&h=250&fit=crop"
+    "miniatura": "https://screens.cdn.wordwall.net/200/15cb416fb9cd4671a2823b95426ed35c_44"
   },
   {
     "nivel": "4basico",
     "asignatura": "matematicas",
-    "titulo": "Sumas y Restas Básicas",
-    "descripcion": "Actividad divertida para practicar operaciones simples.",
+    "titulo": "Reparte canicas",
+    "descripcion": "Fernanda tiene 300 canicas y quiere darle 50 a Dannae, 50 a Denisse y 50 a Constanza. le ayudas?.",
     "url": "https://wordwall.net/es/resource/10435294",
-    "embedUrl": "https://wordwall.net/es/embed/1a556db06a9440e0aa84537f3e04806d?themeId=65&templateId=2&fontStackId=0",
+    "embedUrl": "https://wordwall.net/es/embed/8b6a3106e08740f582f1b5083682f63c?themeId=65&templateId=8&fontStackId=0",
     "icono": "https://cdn-icons-png.flaticon.com/512/3135/3135715.png",
-    "miniatura": "https://images.unsplash.com/photo-1635070041078-e363dbe005cb?w=400&h=250&fit=crop"
+    "miniatura": "https://screens.cdn.wordwall.net/200/8b6a3106e08740f582f1b5083682f63c_65"
   },
   {
     "nivel": "4basico",
     "asignatura": "ciencias",
-    "titulo": "El Sistema Solar",
-    "descripcion": "Explora los planetas con este quiz espacial.",
-    "url": "https://wordwall.net/es/resource/13654785",
-    "embedUrl": "https://wordwall.net/es/embed/1a556db06a9440e0aa84537f3e04806d?themeId=65&templateId=2&fontStackId=0",
+    "titulo": "Cuidemos nuestro cuerpo y nuestro entorno",
+    "descripcion": "Comprender la importancia del uso adecuado de los recursos, alimentación saludable y la luz a través de un verdadero o falso.",
+    "url": "https://wordwall.net/es/resource/99995981",
+    "embedUrl": "https://wordwall.net/es/embed/8a6d8c42a7ae4792b6adbbc441d9bbdc?themeId=59&templateId=35&fontStackId=12",
     "icono": "https://cdn-icons-png.flaticon.com/512/2942/2942809.png",
-    "miniatura": "https://images.unsplash.com/photo-1635070041078-e363dbe005cb?w=400&h=250&fit=crop"
+    "miniatura": "https://screens.cdn.wordwall.net/200/8a6d8c42a7ae4792b6adbbc441d9bbdc_59"
   },
   {
     "nivel": "4basico",
     "asignatura": "ciencias",
-    "titulo": "El Sistema Solar",
-    "descripcion": "Explora los planetas con este quiz espacial.",
-    "url": "https://wordwall.net/es/resource/13654785",
-    "embedUrl": "https://wordwall.net/es/embed/1a556db06a9440e0aa84537f3e04806d?themeId=65&templateId=2&fontStackId=0",
+    "titulo": "Empareja cada parte de las palabras con su función",
+    "descripcion": "INGRESAR UNA DESCRIPCION.",
+    "url": "https://wordwall.net/es/resource/99964252",
+    "embedUrl": "https://wordwall.net/es/embed/6fccb80b4c2c45f2882a983946b66c75?themeId=51&templateId=3&fontStackId=0",
     "icono": "https://cdn-icons-png.flaticon.com/512/2942/2942809.png",
-    "miniatura": "https://images.unsplash.com/photo-1635070041078-e363dbe005cb?w=400&h=250&fit=crop"
+    "miniatura": "https://screens.cdn.wordwall.net/200/6fccb80b4c2c45f2882a983946b66c75_51"
   },
   {
     "nivel": "4basico",
     "asignatura": "ciencias",
-    "titulo": "El Sistema Solar",
-    "descripcion": "Explora los planetas con este quiz espacial.",
-    "url": "https://wordwall.net/es/resource/13654785",
-    "embedUrl": "https://wordwall.net/es/embed/1a556db06a9440e0aa84537f3e04806d?themeId=65&templateId=2&fontStackId=0",
+    "titulo": "Explorando la luz, el sonido y el universo",
+    "descripcion": "INGRESAR UNA DESCRIPCION.",
+    "url": "https://wordwall.net/es/resource/99996803",
+    "embedUrl": "https://wordwall.net/es/embed/9b657023e8c543399cd263388c0d4aaf?themeId=23&templateId=71&fontStackId=12",
     "icono": "https://cdn-icons-png.flaticon.com/512/2942/2942809.png",
-    "miniatura": "https://images.unsplash.com/photo-1635070041078-e363dbe005cb?w=400&h=250&fit=crop"
+    "miniatura": "https://screens.cdn.wordwall.net/200/9b657023e8c543399cd263388c0d4aaf_23b"
   },
   {
     "nivel": "4basico",
@@ -542,32 +542,32 @@
   {
     "nivel": "5basico",
     "asignatura": "ciencias",
-    "titulo": "El Sistema Solar",
+    "titulo": "Ciencia en acción. Misión sustentable",
     "descripcion": "Explora los planetas con este quiz espacial.",
-    "url": "https://wordwall.net/es/resource/13654785",
-    "embedUrl": "https://wordwall.net/es/embed/1a556db06a9440e0aa84537f3e04806d?themeId=65&templateId=2&fontStackId=0",
+    "url": "https://wordwall.net/es/resource/99946314",
+    "embedUrl": "https://wordwall.net/es/embed/b17465cd87794b9baa1e1d41d948de71?themeId=49&templateId=36&fontStackId=0",
     "icono": "https://cdn-icons-png.flaticon.com/512/2942/2942809.png",
-    "miniatura": "https://images.unsplash.com/photo-1635070041078-e363dbe005cb?w=400&h=250&fit=crop"
+    "miniatura": "https://screens.cdn.wordwall.net/200/b17465cd87794b9baa1e1d41d948de71_49"
   },
   {
     "nivel": "5basico",
     "asignatura": "ciencias",
-    "titulo": "El Sistema Solar",
-    "descripcion": "Explora los planetas con este quiz espacial.",
-    "url": "https://wordwall.net/es/resource/13654785",
-    "embedUrl": "https://wordwall.net/es/embed/1a556db06a9440e0aa84537f3e04806d?themeId=65&templateId=2&fontStackId=0",
+    "titulo": "Conociendo el planeta vivo",
+    "descripcion": "Hay palabras clave escondidas en una sopa de letras, encuentralas con ayuda de las pistas.",
+    "url": "https://wordwall.net/es/resource/99943657",
+    "embedUrl": "https://wordwall.net/es/embed/1b10d15460724f818ad0e5246b98c269?themeId=2&templateId=10&fontStackId=0",
     "icono": "https://cdn-icons-png.flaticon.com/512/2942/2942809.png",
-    "miniatura": "https://images.unsplash.com/photo-1635070041078-e363dbe005cb?w=400&h=250&fit=crop"
+    "miniatura": "https://screens.cdn.wordwall.net/200/1b10d15460724f818ad0e5246b98c269_0"
   },
   {
     "nivel": "5basico",
     "asignatura": "ciencias",
-    "titulo": "El Sistema Solar",
+    "titulo": "Desafío ciencia total",
     "descripcion": "Explora los planetas con este quiz espacial.",
-    "url": "https://wordwall.net/es/resource/13654785",
-    "embedUrl": "https://wordwall.net/es/embed/1a556db06a9440e0aa84537f3e04806d?themeId=65&templateId=2&fontStackId=0",
+    "url": "https://wordwall.net/es/resource/99945158",
+    "embedUrl": "https://wordwall.net/es/embed/01abed0a74964192b7b934212ec81d01?themeId=65&templateId=5&fontStackId=0",
     "icono": "https://cdn-icons-png.flaticon.com/512/2942/2942809.png",
-    "miniatura": "https://images.unsplash.com/photo-1635070041078-e363dbe005cb?w=400&h=250&fit=crop"
+    "miniatura": "https://screens.cdn.wordwall.net/200/01abed0a74964192b7b934212ec81d01_65"
   },
   {
     "nivel": "5basico",
@@ -632,22 +632,22 @@
   {
     "nivel": "6basico",
     "asignatura": "matematicas",
-    "titulo": "Sumas y Restas Básicas",
-    "descripcion": "Actividad divertida para practicar operaciones simples.",
-    "url": "https://wordwall.net/es/resource/10435294",
-    "embedUrl": "https://wordwall.net/es/embed/1a556db06a9440e0aa84537f3e04806d?themeId=65&templateId=2&fontStackId=0",
+    "titulo": "Pensando en fracciones",
+    "descripcion": "El estudiante debe leer el enunciado, luego calcular y resolver para finalmente escribir su respuesta.",
+    "url": "https://wordwall.net/es/resource/100074306",
+    "embedUrl": "https://wordwall.net/es/embed/179ce6eb99734c2a9a24aea6ae420733?themeId=65&templateId=89&fontStackId=0",
     "icono": "https://cdn-icons-png.flaticon.com/512/3135/3135715.png",
-    "miniatura": "https://images.unsplash.com/photo-1635070041078-e363dbe005cb?w=400&h=250&fit=crop"
+    "miniatura": "https://screens.cdn.wordwall.net/200/179ce6eb99734c2a9a24aea6ae420733_0"
   },
   {
     "nivel": "6basico",
     "asignatura": "matematicas",
-    "titulo": "Sumas y Restas Básicas",
-    "descripcion": "Actividad divertida para practicar operaciones simples.",
-    "url": "https://wordwall.net/es/resource/10435294",
-    "embedUrl": "https://wordwall.net/es/embed/1a556db06a9440e0aa84537f3e04806d?themeId=65&templateId=2&fontStackId=0",
+    "titulo": "Representando potencias",
+    "descripcion": "El evaluado debe seleccionar la manera correcta de representar la fracción (ejercicios 1,2 y 3). Posteriormente la representación y resultado.",
+    "url": "https://wordwall.net/es/resource/100075135",
+    "embedUrl": "https://wordwall.net/es/embed/b1fcb444f05f41ad9b3a8b048ca5876a?themeId=21&templateId=69&fontStackId=0",
     "icono": "https://cdn-icons-png.flaticon.com/512/3135/3135715.png",
-    "miniatura": "https://images.unsplash.com/photo-1635070041078-e363dbe005cb?w=400&h=250&fit=crop"
+    "miniatura": "https://screens.cdn.wordwall.net/200/b1fcb444f05f41ad9b3a8b048ca5876a_0"
   },
   {
     "nivel": "6basico",
